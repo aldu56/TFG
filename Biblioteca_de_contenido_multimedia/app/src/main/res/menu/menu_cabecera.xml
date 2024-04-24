@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/itemAcercaDe"
+        android:title="@string/Acerca_de" />
+    <item
+        android:id="@+id/itemAnadirPelicula"
+        android:title="@string/Nueva_peli" />
+    <item
+        android:id="@+id/itemMasInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Mas info" />
+
+</menu>
