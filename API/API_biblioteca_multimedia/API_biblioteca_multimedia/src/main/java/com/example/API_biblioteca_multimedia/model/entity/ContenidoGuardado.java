@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "peliculas_guardadas")
-public class PeliculaGuardada {
+@Table(name = "contenido_guardadas")
+public class ContenidoGuardado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

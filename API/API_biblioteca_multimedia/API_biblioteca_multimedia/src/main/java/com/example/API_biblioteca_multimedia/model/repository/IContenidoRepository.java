@@ -10,6 +10,13 @@ import java.util.List;
 public interface IContenidoRepository extends CrudRepository<Contenido, Integer> {
 
 
+
+    /////////////////////////////////
+    // EN UN PRINCIPIO IBA A HACER USO DE ESTOS METODO PERO AL FINAL LA LOGICA DE FILTRADO DEL CONTENIDO
+    // LA HE DECIDIDO HACER DESDE LA PROGRAMACION DE LA PROPIA APP POR LO QUE NO NECESITO ESTO, LO DEJO DE IGUAL MANERA.
+    /////////////////////////////////
+
+
     // Obtener Contenido por titulo.
     public Contenido getContenidoByTitulo(String titulo);
 
