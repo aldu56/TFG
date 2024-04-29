@@ -17,10 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -48,7 +45,40 @@ public class ContenidoController {
         return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
     }
 
+    @GetMapping("/contenidosByAnyo/{anyo}")
+    public ResponseEntity<List<ContenidoDTO>> getContenidoByAnyo(@PathVariable int anyo){
+        List<Contenido> contenidos = contenidoService.getContenidoByAnyo(anyo);
+        List<ContenidoDTO> contenidosDTO = contenidoMapper.toDTO(contenidos);
+        return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
+    }
 
+    @GetMapping("/contenidosByCategoria")
+    public ResponseEntity<List<ContenidoDTO>> getContenidoByCategoria(@RequestParam String categoria){
+        List<Contenido> contenidos = contenidoService.getContenidoByCategoria(categoria);
+        List<ContenidoDTO> contenidosDTO = contenidoMapper.toDTO(contenidos);
+        return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
+    }
+
+    @GetMapping("/contenidosByAutor")
+    public ResponseEntity<List<ContenidoDTO>> getContenidoByAutorIsLikeIgnoreCase(@RequestParam String autor){
+        List<Contenido> contenidos = contenidoService.getContenidoByAutorIsLikeIgnoreCase(autor);
+        List<ContenidoDTO> contenidosDTO = contenidoMapper.toDTO(contenidos);
+        return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
+    }
+
+    @GetMapping("/contenidosByGenero")
+    public ResponseEntity<List<ContenidoDTO>> getContenidoByGeneroIsLikeIgnoreCase(@RequestParam String genero){
+        List<Contenido> contenidos = contenidoService.getContenidoByGeneroIsLikeIgnoreCase(genero);
+        List<ContenidoDTO> contenidosDTO = contenidoMapper.toDTO(contenidos);
+        return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
+    }
+
+    @GetMapping("/contenidosByPuntuacion/{puntuacion}")
+    public ResponseEntity<List<ContenidoDTO>> getContenidosByPuntuacionIsGreaterThanEqual(@PathVariable  float puntuacion){
+        List<Contenido> contenidos = contenidoService.getContenidosByPuntuacionIsGreaterThanEqual(puntuacion);
+        List<ContenidoDTO> contenidosDTO = contenidoMapper.toDTO(contenidos);
+        return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
+    }
 
 
 }
