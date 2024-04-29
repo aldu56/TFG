@@ -8,11 +8,23 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvExplorar"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="411dp"
+        android:layout_height="678dp"
         android:background="@color/mirojo"
         android:backgroundTint="@color/mirojo"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985" />
+
+    <SearchView
+        android:id="@+id/searchViewEx"
+        android:layout_width="417dp"
+        android:layout_height="62dp"
+        android:background="#3E0813"
+        app:layout_constraintBottom_toTopOf="@+id/rvExplorar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

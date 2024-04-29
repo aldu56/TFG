@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BibliotecaDeContenidoMultimedia"
         tools:targetApi="31">
         <activity
+            android:name=".Mas_Info"
+            android:exported="false" />
+        <activity
             android:name=".pruebaLista"
             android:exported="false"
             android:label="@string/title_activity_prueba_lista"

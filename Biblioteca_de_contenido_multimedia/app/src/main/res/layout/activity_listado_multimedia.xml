@@ -9,18 +9,19 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLista"
-        android:layout_width="410dp"
-        android:layout_height="731dp"
+        android:layout_width="413dp"
+        android:layout_height="688dp"
         android:background="@color/mirojo"
         android:backgroundTint="@color/mirojo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/btnNueva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layput_gravity="bottom|end"
@@ -35,4 +36,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.943"
          />
+
+    <SearchView
+        android:id="@+id/txtBuscar"
+        android:layout_width="409dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="1dp"
+        android:background="#3E0813"
+        app:layout_constraintBottom_toTopOf="@+id/rvLista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

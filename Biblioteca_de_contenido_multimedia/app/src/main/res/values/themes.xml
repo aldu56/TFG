@@ -3,6 +3,9 @@
     <style name="Base.Theme.BibliotecaDeContenidoMultimedia" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/mirojo</item>
+        <item name="colorPrimaryVariant">@color/miamarillo</item>
     </style>
 
     <style name="Theme.BibliotecaDeContenidoMultimedia" parent="Base.Theme.BibliotecaDeContenidoMultimedia" />

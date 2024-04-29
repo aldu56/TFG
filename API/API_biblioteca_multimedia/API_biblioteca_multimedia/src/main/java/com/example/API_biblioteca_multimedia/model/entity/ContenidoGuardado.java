@@ -14,7 +14,13 @@ public class ContenidoGuardado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPeliculaGuardada;
+    private int idPeliculaGuardada;
+
+    @Id
+    private int id_user;
+
+    @Id
+    private int id_contenido;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_user", referencedColumnName = "id")
