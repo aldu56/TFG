@@ -9,18 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "contenido_guardadas")
+@Table(name = "contenido_guardados")
 public class ContenidoGuardado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPeliculaGuardada;
-
-    @Id
-    private int id_user;
-
-    @Id
-    private int id_contenido;
+    private int id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_user", referencedColumnName = "id")

@@ -1,5 +1,6 @@
 package com.example.API_biblioteca_multimedia.model.service.Contenido;
 
+import com.example.API_biblioteca_multimedia.exceptions.Contenido.ContenidoNotFoundException;
 import com.example.API_biblioteca_multimedia.model.entity.Contenido;
 import com.example.API_biblioteca_multimedia.model.repository.IContenidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ContenidoService implements IContenidoService{
 
     @Override
     public Contenido findById(int id) {
-        return contenidoRepository.findById(id).orElseThrow(null); // TODO -------> () -> ContenidoNotFoundException("Error al buscar el contenido con ID: " + id)
+        return contenidoRepository.findById(id).orElseThrow(() -> new ContenidoNotFoundException("Error al buscar el contenido con ID: " + id));
     }
 
     @Override
@@ -41,7 +42,7 @@ public class ContenidoService implements IContenidoService{
 
     @Override
     public Contenido getContenidoByTitulo(String titulo) {
-        return null;
+        return contenidoRepository.getContenidoByTitulo(titulo);
     }
 
     @Override

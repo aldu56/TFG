@@ -1,4 +1,4 @@
-package es.pmdm.bibliotecadecontenidomultimedia;
+package es.pmdm.bibliotecadecontenidomultimedia.Model;
 
 import java.io.Serializable;
 

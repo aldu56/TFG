@@ -12,4 +12,7 @@ public interface IContenidoGuardadoService {
     ContenidoGuardado updateContenidoGuardado(ContenidoGuardado contenidoGuardado);
     void deleteContenidoGuardado(ContenidoGuardado contenidoGuardado);
 
+    List<ContenidoGuardado> getContenidoGuardadoByUserId(int id_user);
+    List<ContenidoGuardado> getContenidoGuardadoByContenidoId(int id_contenido);
+
 }

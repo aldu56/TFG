@@ -1,20 +1,16 @@
 package es.pmdm.bibliotecadecontenidomultimedia;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+
+import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
 
 public class ContenidoAdapter extends RecyclerView.Adapter<ContenidoAdapter.ContenidoViewHolder> {
     private int mResource;

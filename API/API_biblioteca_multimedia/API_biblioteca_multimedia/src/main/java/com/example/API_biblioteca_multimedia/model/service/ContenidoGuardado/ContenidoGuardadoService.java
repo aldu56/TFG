@@ -37,4 +37,14 @@ public class ContenidoGuardadoService implements IContenidoGuardadoService{
     public void deleteContenidoGuardado(ContenidoGuardado contenidoGuardado) {
         iContenidoGuardadoRepository.delete(contenidoGuardado);
     }
+
+    @Override
+    public List<ContenidoGuardado> getContenidoGuardadoByUserId(int id_user) {
+        return iContenidoGuardadoRepository.getContenidoGuardadoByUserId(id_user);
+    }
+
+    @Override
+    public List<ContenidoGuardado> getContenidoGuardadoByContenidoId(int id_contenido) {
+        return iContenidoGuardadoRepository.getContenidoGuardadoByContenidoId(id_contenido);
+    }
 }

@@ -10,6 +10,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
+import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
+
 public class Listado_Multimedia extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
 RecyclerView rvLista;
