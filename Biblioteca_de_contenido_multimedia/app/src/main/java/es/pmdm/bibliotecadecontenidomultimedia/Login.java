@@ -9,16 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import es.pmdm.bibliotecadecontenidomultimedia.Interface.Llamada_api_1;
+import es.pmdm.bibliotecadecontenidomultimedia.ApiManager;
+import es.pmdm.bibliotecadecontenidomultimedia.Listado_Multimedia;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
+import es.pmdm.bibliotecadecontenidomultimedia.R;
+import es.pmdm.bibliotecadecontenidomultimedia.Register;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Login extends AppCompatActivity {
 
@@ -27,38 +27,31 @@ public class Login extends AppCompatActivity {
     Button btnAcceder;
     Button btnRegistrarse;
 
-    List<User> listaUsuarios = new ArrayList<>();
+    List<User> listaUsuarios = null;
     int idUsuario = 0;
+
+    ApiManager apiManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        edUsername = (EditText) findViewById(R.id.edUser);
-        edPassword = (EditText) findViewById(R.id.edPassword);
-        btnAcceder = (Button) findViewById(R.id.btnAcceder);
-        btnRegistrarse = (Button) findViewById(R.id.btnRegistrarse);
+        apiManager = new ApiManager();
 
+        edUsername = findViewById(R.id.edUser);
+        edPassword = findViewById(R.id.edPassword);
+        btnAcceder = findViewById(R.id.btnAcceder);
+        btnRegistrarse = findViewById(R.id.btnRegistrarse);
 
         btnAcceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username, password;
-
-                username = edUsername.getText().toString();
-                password = edPassword.getText().toString();
-
-                if (!existeUser(username, password)) {
-                    Toast.makeText(Login.this, "Usuario o contraseña incorrecto", Toast.LENGTH_SHORT).show();
-                } else {
-                    Intent intent = new Intent(Login.this, Listado_Multimedia.class);
-                    intent.putExtra("ID_USUARIO", idUsuario);
-                    startActivity(intent);
-                }
+                String username = edUsername.getText().toString();
+                String password = edPassword.getText().toString();
+                getUsersAndCheckUser(username, password);
             }
         });
-
 
         btnRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,42 +60,10 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
-
-    private boolean existeUser(String username, String password) {
-        //Comprobar que existe el usuario antes de acceder y que coincide user con password.
-
-        getUsers();
-
-        Boolean bol = false;
-
-        for (User us : listaUsuarios) {
-            if (us.getUsername() == username && us.getPassword() == password) {
-                idUsuario = us.getId();
-                bol = true;
-            } else {
-                bol = false;
-            }
-        }
-
-        return bol;
-    }
-
-
-    private void getUsers(){
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.66:8080/api/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        Llamada_api_1 llamadaApi1 = retrofit.create(Llamada_api_1.class);
-
-        Call<List<User>> call = llamadaApi1.getUsers();
-
-        call.enqueue(new Callback<List<User>>() {
+    private void getUsersAndCheckUser(String username, String password) {
+        apiManager.getUsers(new Callback<List<User>>() {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                 if (!response.isSuccessful()) {
@@ -110,7 +71,7 @@ public class Login extends AppCompatActivity {
                     return;
                 }
                 listaUsuarios = response.body();
-
+                checkUser(username, password);
             }
 
             @Override
@@ -119,4 +80,22 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+    private void checkUser(String username, String password) {
+        if (listaUsuarios != null) {
+            for (User us : listaUsuarios) {
+                if (us.getUsername().equals(username) && us.getPassword().equals(password)) {
+                    idUsuario = us.getId();
+                    Intent intent = new Intent(Login.this, Listado_Multimedia.class);
+                    intent.putExtra("ID_USUARIO", idUsuario);
+                    startActivity(intent);
+                    return;
+                }
+            }
+        }
+        Toast.makeText(Login.this, "Usuario o contraseña incorrecto", Toast.LENGTH_SHORT).show();
+    }
+
+
+
 }

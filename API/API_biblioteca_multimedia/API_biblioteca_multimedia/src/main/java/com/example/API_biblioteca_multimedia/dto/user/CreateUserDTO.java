@@ -15,11 +15,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class CreateUserDTO implements Serializable {
 
-    @Schema(description = "Username")
+    @Schema(description = "username")
     @NotBlank
     private String username;
 
-    @Schema(description = "Password")
+    @Schema(description = "password")
     @NotBlank
     private String password;
 
