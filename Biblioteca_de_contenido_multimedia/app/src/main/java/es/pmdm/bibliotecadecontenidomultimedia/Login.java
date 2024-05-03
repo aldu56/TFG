@@ -21,7 +21,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Login extends AppCompatActivity {
-
     EditText edUsername;
     EditText edPassword;
     Button btnAcceder;
@@ -71,7 +70,24 @@ public class Login extends AppCompatActivity {
                     return;
                 }
                 listaUsuarios = response.body();
-                checkUser(username, password);
+
+                // Verificar si la lista de usuarios no es nula y no está vacía
+                if (listaUsuarios != null && !listaUsuarios.isEmpty()) {
+                    // Iterar a través de todos los usuarios y hacer la comprobación
+                    for (User user : listaUsuarios) {
+                        if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                            idUsuario = user.getId();
+                        //    System.out.println("Id Usuario " + user.getUsername() + ": " + user.getId());
+                            Intent intent = new Intent(Login.this, Listado_Multimedia.class);
+                            intent.putExtra("ID_USUARIO", idUsuario);
+                            startActivity(intent);
+                            return;
+                        }
+                    }
+                }
+
+                // Si llegamos aquí, significa que no se encontró ningún usuario válido
+                Toast.makeText(Login.this, "Usuario o contraseña incorrecto", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -80,24 +96,6 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
-    private void checkUser(String username, String password) {
-        if (listaUsuarios != null) {
-            for (User us : listaUsuarios) {
-                if (us.getUsername().equals(username) && us.getPassword().equals(password)) {
-                    idUsuario = us.getId();
-
-                    Intent intent = new Intent(Login.this, Listado_Multimedia.class);
-                    intent.putExtra("ID_USUARIO", idUsuario);
-                    System.out.println(idUsuario);
-                    startActivity(intent);
-                    return;
-                }
-            }
-        }
-        Toast.makeText(Login.this, "Usuario o contraseña incorrecto", Toast.LENGTH_SHORT).show();
-    }
-
 
 
 }

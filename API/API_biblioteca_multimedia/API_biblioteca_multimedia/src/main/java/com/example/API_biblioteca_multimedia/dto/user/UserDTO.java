@@ -1,5 +1,6 @@
 package com.example.API_biblioteca_multimedia.dto.user;
 
+import com.example.API_biblioteca_multimedia.dto.contenido.ContenidoDTO;
 import com.example.API_biblioteca_multimedia.model.entity.Contenido;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +17,7 @@ public class UserDTO implements Serializable {
     private String username;
     private String password;
 
-    private List<Contenido> contenidos;
+
+    private List<ContenidoDTO> contenidos;
 
 }

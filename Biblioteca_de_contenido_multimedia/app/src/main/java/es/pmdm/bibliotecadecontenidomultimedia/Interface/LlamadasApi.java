@@ -9,6 +9,8 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface  LlamadasApi {
     @GET("users")
@@ -24,7 +26,6 @@ public interface  LlamadasApi {
     @GET("contenidosNormales")
     Call<List<Contenido>> getContenidos();
 
-    @GET("userById")
-    Call<User> getUserById(int idUser);
-
+    @GET("userById/{id}")
+    Call<UserDto> getUserById(@Path("id") int id);
 }

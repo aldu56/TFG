@@ -1,5 +1,6 @@
 package com.example.API_biblioteca_multimedia.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,6 +32,7 @@ public class User {
     joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "contenido_id", referencedColumnName = "id")
     )
+    @JsonManagedReference
     private List<Contenido> contenidos;
 
 }

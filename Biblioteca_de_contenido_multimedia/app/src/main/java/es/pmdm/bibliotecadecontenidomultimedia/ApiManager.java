@@ -18,7 +18,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiManager {
-    private static final String BASE_URL = "http://192.168.30.110:8080/api/";
+    private static final String BASE_URL = "http://192.168.1.66:8080/api/";
     private LlamadasApi llamadaApi1;
 
     public ApiManager() {
@@ -48,8 +48,8 @@ public class ApiManager {
         call.enqueue(callback);
     }
 
-    public void getUserById(int idUser, Callback<User> callback){
-        Call<User> call = llamadaApi1.getUserById(idUser);
+    public void getUserById(int idUser, Callback<UserDto> callback){
+        Call<UserDto> call = llamadaApi1.getUserById(idUser);
         call.enqueue(callback);
     }
 }

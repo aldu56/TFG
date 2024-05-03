@@ -1,5 +1,7 @@
 package com.example.API_biblioteca_multimedia.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -48,7 +50,9 @@ public class Contenido {
     @Column(nullable = false)
     private String comentario;
 
-    @ManyToMany(mappedBy = "contenidos")
+    @ManyToMany(mappedBy = "contenidos", fetch = FetchType.LAZY)
+    @JsonManagedReference
+    @JsonIgnore
     private List<User> users;
 
 

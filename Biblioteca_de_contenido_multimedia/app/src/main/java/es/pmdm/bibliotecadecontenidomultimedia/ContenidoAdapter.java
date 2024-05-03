@@ -1,5 +1,6 @@
 package es.pmdm.bibliotecadecontenidomultimedia;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,56 +10,36 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
 
-public class ContenidoAdapter extends RecyclerView.Adapter<ContenidoAdapter.ContenidoViewHolder> {
-    private int mResource;
+public class ContenidoAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-     ArrayList<Contenido> listaContenidoUsuario;
+    Context context;
+    List<Contenido> contenidos;
 
-    private ArrayList<Contenido> listaFiltrar;
-
-
-    public ContenidoAdapter(ArrayList<Contenido> listaContenidoUsuario) {
-        this.listaContenidoUsuario = listaContenidoUsuario;
-        listaFiltrar = new ArrayList<>();
-        listaFiltrar.addAll(listaContenidoUsuario);
+    public ContenidoAdapter(Context context, List<Contenido> contenidos) {
+        this.context = context;
+        this.contenidos = contenidos;
     }
 
     @NonNull
     @Override
-    public ContenidoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_multimedia, null, false);
-        return new ContenidoViewHolder(view);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_view, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContenidoViewHolder holder, int position) {
-        holder.txtTitulo.setText(listaContenidoUsuario.get(position).getTitulo());
-        holder.txtAutor.setText(listaContenidoUsuario.get(position).getAutor());
-        holder.txtAno.setText(listaContenidoUsuario.get(position).getAnyo());
-        holder.txtCategoria.setText(listaContenidoUsuario.get(position).getCategoria());
-
-
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.titulo.setText(contenidos.get(position).getTitulo());
+        holder.autor.setText(contenidos.get(position).getAutor());
+        holder.ano.setText(contenidos.get(position).getAnyo());
+        holder.categoria.setText(contenidos.get(position).getCategoria());
     }
 
     @Override
     public int getItemCount() {
-        return listaContenidoUsuario.size();
-    }
-
-
-    public class ContenidoViewHolder extends RecyclerView.ViewHolder {
-        TextView txtTitulo, txtAutor, txtAno, txtCategoria;
-
-        public ContenidoViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            txtTitulo = itemView.findViewById(R.id.titulo);
-            txtAutor = itemView.findViewById(R.id.autor);
-            txtAno = itemView.findViewById(R.id.ano);
-            txtCategoria = itemView.findViewById(R.id.categoria);
-        }
+        return contenidos.size();
     }
 }

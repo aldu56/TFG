@@ -134,7 +134,7 @@ public class Register extends AppCompatActivity {
             if (existe == true) {
                 Toast.makeText(this, "El usuario " + username + " ya existe.", Toast.LENGTH_SHORT).show();
             } else {
-                UserDto userDto = new UserDto(username, password);
+                UserDto userDto = new UserDto(username, password, null);
 
                 addUser(userDto);
             }

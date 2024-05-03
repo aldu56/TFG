@@ -1,6 +1,8 @@
 package es.pmdm.bibliotecadecontenidomultimedia.dto;
 
-public class ContenidoDto {
+import java.io.Serializable;
+
+public class ContenidoDto implements Serializable {
 
     private String titulo;
 

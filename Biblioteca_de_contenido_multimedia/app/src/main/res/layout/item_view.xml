@@ -30,10 +30,10 @@
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.569"
+                app:layout_constraintHorizontal_bias="0.867"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.702" />
+                app:layout_constraintVertical_bias="0.644" />
 
             <TextView
                 android:id="@+id/categoria"
@@ -45,10 +45,10 @@
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.853"
+                app:layout_constraintHorizontal_bias="0.867"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.264" />
+                app:layout_constraintVertical_bias="0.413" />
 
             <TextView
                 android:id="@+id/titulo"

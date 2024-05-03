@@ -41,10 +41,11 @@ public class UserController {
 
     }
 
-    @GetMapping("/userById")
-    public ResponseEntity<User> getUserById(@PathVariable int idUser){
-        User user = userService.findById(idUser);
-        return new ResponseEntity<>(user, HttpStatus.OK);
+    @GetMapping("/userById/{id}")
+    public ResponseEntity<UserDTO> getUserById(@PathVariable int id){
+        User user = userService.findById(id);
+        UserDTO userDTO = userMapper.toDto(user);
+        return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
 
 
