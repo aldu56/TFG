@@ -3,7 +3,6 @@ package es.pmdm.bibliotecadecontenidomultimedia.Interface;
 import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
-import es.pmdm.bibliotecadecontenidomultimedia.Model.ContenidoGuardado;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
@@ -21,10 +20,11 @@ public interface  LlamadasApi {
     @GET("contenidosByCategoria")
     Call<List<Contenido>> getContenidoByCategoria(String categoria);
 
-    @GET("contenidosGuardadosByUserId")
-    Call<List<ContenidoGuardado>> getContenidosGuardadosByUserId(int userId);
 
-    @GET("contenidos")
+    @GET("contenidosNormales")
     Call<List<Contenido>> getContenidos();
+
+    @GET("userById")
+    Call<User> getUserById(int idUser);
 
 }

@@ -9,7 +9,6 @@ import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Interface.LlamadasApi;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
-import es.pmdm.bibliotecadecontenidomultimedia.Model.ContenidoGuardado;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
@@ -19,7 +18,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiManager {
-    private static final String BASE_URL = "http://192.168.1.66:8080/api/";
+    private static final String BASE_URL = "http://192.168.30.110:8080/api/";
     private LlamadasApi llamadaApi1;
 
     public ApiManager() {
@@ -44,13 +43,13 @@ public class ApiManager {
         call.enqueue(callback);
     }
 
-    public void getContenidosGuardadosByUserId(int userId, Callback<List<ContenidoGuardado>> callback){
-        Call<List<ContenidoGuardado>> call = llamadaApi1.getContenidosGuardadosByUserId(userId);
+    public void getContenidos(Callback<List<Contenido>> callback){
+        Call<List<Contenido>> call = llamadaApi1.getContenidos();
         call.enqueue(callback);
     }
 
-    public void getContenidos(Callback<List<Contenido>> callback){
-        Call<List<Contenido>> call = llamadaApi1.getContenidos();
+    public void getUserById(int idUser, Callback<User> callback){
+        Call<User> call = llamadaApi1.getUserById(idUser);
         call.enqueue(callback);
     }
 }

@@ -12,6 +12,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class ContenidoDTO implements Serializable{
 
+    private int id;
+
     private String titulo;
 
     private int anyo;

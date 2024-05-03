@@ -45,6 +45,14 @@ public class ContenidoController {
         return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
     }
 
+    @GetMapping("/contenidosNormales")
+    public ResponseEntity<List<Contenido>> getContenidosNormales(){
+        List<Contenido> contenidos = contenidoService.findAll();
+        return new ResponseEntity<>(contenidos, HttpStatus.OK);
+    }
+
+
+
     @GetMapping("/contenidosByAnyo/{anyo}")
     public ResponseEntity<List<ContenidoDTO>> getContenidoByAnyo(@PathVariable int anyo){
         List<Contenido> contenidos = contenidoService.getContenidoByAnyo(anyo);

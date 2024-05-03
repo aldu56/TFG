@@ -26,4 +26,11 @@ public class User {
     @Column
     private String password;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "contiene",
+    joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "contenido_id", referencedColumnName = "id")
+    )
+    private List<Contenido> contenidos;
+
 }

@@ -15,12 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
-import es.pmdm.bibliotecadecontenidomultimedia.Model.ContenidoGuardado;
+import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Listado_Multimedia extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class  Listado_Multimedia extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     RecyclerView rvLista;
     ArrayList<Contenido> listaContenidoUsuario;
@@ -28,9 +28,9 @@ public class Listado_Multimedia extends AppCompatActivity implements SearchView.
     FloatingActionButton btnNueva;
     ApiManager apiManager;
 
-    List<ContenidoGuardado> listaIds;
     List<Contenido> listaGenerica;
 
+    User user ;
     ArrayList<Contenido> listaUsuario;
 
 
@@ -55,12 +55,12 @@ public class Listado_Multimedia extends AppCompatActivity implements SearchView.
         //Asigno el menu contextual a la lista para que al mantener me de la opcion de eliminar // TODO configurar el click en eliminar
         registerForContextMenu(rvLista);
 
+        System.out.println(idUsuario);
 
         obtenerListaUsuario(idUsuario);
-        obtenerListaGenerica();
-        asignarLista(listaGenerica);
 
-        ContenidoAdapter adapter = new ContenidoAdapter(listaUsuario);
+
+           ContenidoAdapter adapter = new ContenidoAdapter(listaUsuario);
 
 
         txtBuscar.setOnQueryTextListener(this); // Para que se busque en tiempo real.
@@ -90,22 +90,31 @@ public class Listado_Multimedia extends AppCompatActivity implements SearchView.
 
     public void obtenerListaUsuario(int userId) {
 
-        apiManager.getContenidosGuardadosByUserId(userId, new Callback<List<ContenidoGuardado>>() {
+        apiManager.getUserById(userId, new Callback<User>() {
             @Override
-            public void onResponse(Call<List<ContenidoGuardado>> call, Response<List<ContenidoGuardado>> response) {
+            public void onResponse(Call<User> call, Response<User> response) {
                 if (!response.isSuccessful()) {
                     Toast.makeText(Listado_Multimedia.this, "Codigo:  " + response.code(), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                listaIds = response.body();
+                user = response.body();
             }
 
-
             @Override
-            public void onFailure(Call<List<ContenidoGuardado>> call, Throwable t) {
+            public void onFailure(Call<User> call, Throwable t) {
+                Toast.makeText(Listado_Multimedia.this, t.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
+
+        List<Contenido> listaUserList = user.getContenidos();
+
+        for (Contenido con :
+                listaUserList) {
+            listaUsuario.add(con);
+        }
+
+
 
     }
 
@@ -123,25 +132,10 @@ public class Listado_Multimedia extends AppCompatActivity implements SearchView.
 
             @Override
             public void onFailure(Call<List<Contenido>> call, Throwable t) {
+                Toast.makeText(Listado_Multimedia.this, t.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
     }
 
-    public void asignarLista(List<Contenido> listaGenerica) {
-
-        for (Contenido con :
-                listaGenerica) {
-            for (ContenidoGuardado cg :
-                    listaIds) {
-                if (con.getId() == cg.getId_contenido()) {
-                    listaUsuario.add(con);
-                }
-
-            }
-
-        }
-
-
-    }
 }

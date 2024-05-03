@@ -1,6 +1,7 @@
 package es.pmdm.bibliotecadecontenidomultimedia.Model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Contenido implements Serializable {
 
@@ -16,8 +17,12 @@ public class Contenido implements Serializable {
     private float puntuacion;
     private String comentario;
 
+    private List<User> usuarios;
 
-    public Contenido(int id, String titulo, String categoria, int anyo, String autor, String genero, String url, String duracion, String descripcion, float puntuacion, String comentario) {
+    public Contenido() {
+    }
+
+    public Contenido(int id, String titulo, String categoria, int anyo, String autor, String genero, String url, String duracion, String descripcion, float puntuacion, String comentario, List<User> usuarios) {
         this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
@@ -29,6 +34,7 @@ public class Contenido implements Serializable {
         this.descripcion = descripcion;
         this.puntuacion = puntuacion;
         this.comentario = comentario;
+        this.usuarios = usuarios;
     }
 
     public int getId() {
@@ -117,5 +123,13 @@ public class Contenido implements Serializable {
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
+    }
+
+    public List<User> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<User> usuarios) {
+        this.usuarios = usuarios;
     }
 }

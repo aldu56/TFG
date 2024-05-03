@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -45,5 +47,9 @@ public class Contenido {
 
     @Column(nullable = false)
     private String comentario;
+
+    @ManyToMany(mappedBy = "contenidos")
+    private List<User> users;
+
 
 }

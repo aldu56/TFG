@@ -28,10 +28,9 @@ public class UserController {
     UserMapper userMapper;
 
     @GetMapping("/users")
-    public ResponseEntity<List<UserDTO>> getUsers(){
+    public ResponseEntity<List<User>> getUsers(){
         List<User> users = userService.findAll();
-        List<UserDTO> usersDTO = userMapper.toDTO(users);
-        return new ResponseEntity<>(usersDTO, HttpStatus.OK);
+        return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
     @PostMapping("/createUser")
@@ -41,6 +40,14 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.CREATED);
 
     }
+
+    @GetMapping("/userById")
+    public ResponseEntity<User> getUserById(@PathVariable int idUser){
+        User user = userService.findById(idUser);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+
 
 
 

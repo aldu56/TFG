@@ -86,8 +86,10 @@ public class Login extends AppCompatActivity {
             for (User us : listaUsuarios) {
                 if (us.getUsername().equals(username) && us.getPassword().equals(password)) {
                     idUsuario = us.getId();
+
                     Intent intent = new Intent(Login.this, Listado_Multimedia.class);
                     intent.putExtra("ID_USUARIO", idUsuario);
+                    System.out.println(idUsuario);
                     startActivity(intent);
                     return;
                 }
