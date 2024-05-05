@@ -1,12 +1,13 @@
     package es.pmdm.bibliotecadecontenidomultimedia;
 
     import androidx.appcompat.app.AppCompatActivity;
-    import androidx.recyclerview.widget.LinearLayoutManager;
-    import androidx.recyclerview.widget.RecyclerView;
 
     import android.content.Intent;
     import android.os.Bundle;
     import android.view.View;
+    import android.widget.AdapterView;
+    import android.widget.ArrayAdapter;
+    import android.widget.ListView;
     import android.widget.SearchView;
     import android.widget.Toast;
 
@@ -16,22 +17,24 @@
     import java.util.List;
 
     import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
-    import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
     import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
     import retrofit2.Call;
     import retrofit2.Callback;
     import retrofit2.Response;
 
-    public class Listado_Multimedia extends AppCompatActivity implements SearchView.OnQueryTextListener {
+    public class Listado_Multimedia extends AppCompatActivity{
 
-        RecyclerView rvLista;
-        SearchView txtBuscar;
+        ListView listView;
+        SearchView searchView;
         FloatingActionButton btnNueva;
         ApiManager apiManager;
 
         List<Contenido> listaGenerica;
+        ArrayList<Contenido> contenidoUsuario = new ArrayList<>();
 
         UserDto user;
+
+        ArrayAdapter<Contenido> arrayAdapter;
 
 
         ContenidoAdapter contenidoAdapter;
@@ -44,17 +47,44 @@
             int idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
 
             if (idUsuario != -1) {
-                txtBuscar = findViewById(R.id.txtBuscar);
-                rvLista = findViewById(R.id.rvLista);
+                searchView = findViewById(R.id.search_bar);
+                listView = findViewById(R.id.listView);
                 btnNueva = findViewById(R.id.btnNueva);
                 apiManager = new ApiManager();
 
-                txtBuscar.setOnQueryTextListener(this);
+                obtenerListaUsuario(idUsuario);
 
-                // Inicializa el adaptador una sola vez
-                contenidoAdapter = new ContenidoAdapter(getApplicationContext(), obtenerListaUsuario(idUsuario));
-                rvLista.setLayoutManager(new LinearLayoutManager(this));
-                rvLista.setAdapter(contenidoAdapter);
+
+                arrayAdapter = new ContenidoAdapter(this, R.layout.item_view, contenidoUsuario);
+                listView.setAdapter(arrayAdapter);
+
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        Intent intent = new Intent(Listado_Multimedia.this, Datos_Multimedia.class);
+                        intent.putExtra("POSICION", position);
+                    }
+                });
+
+
+                // SearchView
+                searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        Listado_Multimedia.this.arrayAdapter.getFilter().filter(query);
+
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                       Listado_Multimedia.this.arrayAdapter.getFilter().filter(newText);
+
+                        return false;
+                    }
+                });
+
 
                 btnNueva.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -73,37 +103,23 @@
             }
         }
 
-        @Override
-        public boolean onQueryTextSubmit(String s) {
-            return false;
-        }
 
-        @Override
-        public boolean onQueryTextChange(String s) {
-            // Implementa la lógica de búsqueda aquí si lo necesitas
-            return false;
-        }
-
-        public List<Contenido> obtenerListaUsuario(int userId) {
-            List<Contenido> lista = new ArrayList<>();
-
+        public void obtenerListaUsuario(int userId) {
             System.out.println(userId);
             apiManager.getUserById(userId, new Callback<UserDto>() {
                 @Override
                 public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                     if (!response.isSuccessful()) {
-                        Toast.makeText(Listado_Multimedia.this, "Codigo vomitivo :  " + response.code(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Listado_Multimedia.this, "Codigo (Listado_Multimedia) :  " + response.code(), Toast.LENGTH_SHORT).show();
 
                     }
-
-                    System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
                     user = response.body();
                     if (user != null) {
-                        lista.addAll(user.getContenidos());
+                        contenidoUsuario.addAll(user.getContenidos());
 
                         for (Contenido con :
-                                lista) {
-                            System.out.println(con.getTitulo());
+                                contenidoUsuario) {
+                            System.out.println(con.getTitulo() +", " + con.getAnyo() + " " + con.getPuntuacion() + " " + con.getAutor() );
                         }
                     }
 
@@ -114,8 +130,6 @@
                     Toast.makeText(Listado_Multimedia.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
-
-            return lista;
         }
 
         public void obtenerListaGenerica() {

@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class ContenidoDto implements Serializable {
 
+    //  titulo, anyo, autor, genero, url, duracion, descripcion, puntuacion y comentario.
+
     private String titulo;
 
     private int anyo;

@@ -7,18 +7,15 @@
     android:backgroundTint="@color/mirojo"
     tools:context=".Listado_Multimedia">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvLista"
-        android:layout_width="412dp"
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="414dp"
         android:layout_height="689dp"
-        android:background="@color/mirojo"
-        android:backgroundTint="@color/mirojo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        app:layout_constraintVertical_bias="0.425" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnNueva"
@@ -26,27 +23,23 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
+        android:backgroundTint="@color/miamarillo"
         android:clickable="true"
         android:src="@drawable/icono_add"
-        android:backgroundTint="@color/miamarillo"
-        app:layout_constraintBottom_toBottomOf="@+id/rvLista"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.943"
-         />
+        app:layout_constraintVertical_bias="0.952" />
 
     <SearchView
-        android:id="@+id/txtBuscar"
+        android:id="@+id/search_bar"
         android:layout_width="409dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="1dp"
         android:background="#3E0813"
-        app:layout_constraintBottom_toTopOf="@+id/rvLista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

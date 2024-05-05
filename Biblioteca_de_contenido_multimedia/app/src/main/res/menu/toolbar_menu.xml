@@ -12,7 +12,7 @@
 
     <item
         android:title="Categoria"
-        android:id="@+id/categoria"
+        android:id="@+id/txtGenero"
         android:icon="@drawable/baseline_menu_24"
         app:showAsAction="ifRoom"/>
 </menu>

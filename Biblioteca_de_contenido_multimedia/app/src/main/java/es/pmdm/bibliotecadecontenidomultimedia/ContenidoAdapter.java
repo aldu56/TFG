@@ -1,45 +1,48 @@
 package es.pmdm.bibliotecadecontenidomultimedia;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
 
-public class ContenidoAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class ContenidoAdapter extends ArrayAdapter<Contenido> {
+    private int mResource;
+    private ArrayList<Contenido> misContenidos;
 
-    Context context;
-    List<Contenido> contenidos;
-
-    public ContenidoAdapter(Context context, List<Contenido> contenidos) {
-        this.context = context;
-        this.contenidos = contenidos;
+    public ContenidoAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Contenido> objects) {
+        super(context, resource, objects);
+        mResource = resource;
+        misContenidos = objects;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_view, parent, false));
-    }
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        LayoutInflater miInflador = LayoutInflater.from(this.getContext());
+        View miFila = miInflador.inflate(mResource, parent, false);
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.titulo.setText(contenidos.get(position).getTitulo());
-        holder.autor.setText(contenidos.get(position).getAutor());
-        holder.ano.setText(contenidos.get(position).getAnyo());
-        holder.categoria.setText(contenidos.get(position).getCategoria());
-    }
+        TextView txtTitulo = miFila.findViewById(R.id.txtTitulo);
+        txtTitulo.setText(misContenidos.get(position).getTitulo());
 
-    @Override
-    public int getItemCount() {
-        return contenidos.size();
+        TextView txtAutor = miFila.findViewById(R.id.txtAutor);
+        txtAutor.setText(misContenidos.get(position).getAutor());
+
+        TextView txtAnyo = miFila.findViewById(R.id.txtAno);
+        txtAutor.setText(misContenidos.get(position).getAnyo());
+
+        TextView txtcategoria = miFila.findViewById(R.id.txtGenero);
+        txtAutor.setText(misContenidos.get(position).getGenero());
+
+        return miFila;
     }
 }
