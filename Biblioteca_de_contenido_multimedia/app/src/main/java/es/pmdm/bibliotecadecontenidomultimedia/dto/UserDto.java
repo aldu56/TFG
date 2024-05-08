@@ -10,13 +10,13 @@ public class UserDto implements Serializable {
     private String username;
     private String password;
 
-    private List<Contenido> contenidos;
+    private List<ContenidoDto> contenidos;
 
 
     public UserDto() {
     }
 
-    public UserDto(String username, String password, List<Contenido> contenidos) {
+    public UserDto(String username, String password, List<ContenidoDto> contenidos) {
         this.username = username;
         this.password = password;
         this.contenidos = contenidos;
@@ -38,11 +38,11 @@ public class UserDto implements Serializable {
         this.password = password;
     }
 
-    public List<Contenido> getContenidos() {
+    public List<ContenidoDto> getContenidos() {
         return contenidos;
     }
 
-    public void setContenidos(List<Contenido> contenidos) {
+    public void setContenidos(List<ContenidoDto> contenidos) {
         this.contenidos = contenidos;
     }
 }

@@ -15,6 +15,7 @@ public class ContenidoDTO implements Serializable{
     private int id;
 
     private String titulo;
+    private String categoria;
 
     private int anyo;
 

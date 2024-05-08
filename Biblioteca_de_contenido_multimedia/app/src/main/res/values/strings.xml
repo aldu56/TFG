@@ -11,10 +11,14 @@
         <item>Ciencia Ficcion</item>
         <item>Horror</item>
         <item>Crimen</item>
-        <item>Suspense</item>
+        <item>Suspenso</item>
         <item>Fantasia</item>
         <item>Belica</item>
     </string-array>
+    <!-- TODO PONER STRINGS PELICULA, SERIE, LIBRO-->
+    <string name="PELICULA">Pelicula</string>
+    <string name="SERIE">Serie</string>
+    <string name="LIBRO">Libro</string>
 
 
     <string-array name="opcionesFormato">

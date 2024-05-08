@@ -23,11 +23,12 @@ public class ContenidoDto implements Serializable {
     private float puntuacion;
 
     private String comentario;
+    private String categoria;
 
     public ContenidoDto() {
     }
 
-    public ContenidoDto(String titulo, int anyo, String autor, String genero, String url, String duracion, String descripcion, float puntuacion, String comentario) {
+    public ContenidoDto(String titulo, int anyo, String autor, String genero, String url, String duracion, String descripcion, float puntuacion, String comentario, String categoria) {
         this.titulo = titulo;
         this.anyo = anyo;
         this.autor = autor;
@@ -37,6 +38,7 @@ public class ContenidoDto implements Serializable {
         this.descripcion = descripcion;
         this.puntuacion = puntuacion;
         this.comentario = comentario;
+        this.categoria = categoria;
     }
 
     public String getTitulo() {
@@ -109,5 +111,29 @@ public class ContenidoDto implements Serializable {
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "ContenidoDto{" +
+                "titulo='" + titulo + '\'' +
+                ", anyo=" + anyo +
+                ", autor='" + autor + '\'' +
+                ", genero='" + genero + '\'' +
+                ", url='" + url + '\'' +
+                ", duracion='" + duracion + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", puntuacion=" + puntuacion +
+                ", comentario='" + comentario + '\'' +
+                ", categoria='" + categoria + '\'' +
+                '}';
     }
 }

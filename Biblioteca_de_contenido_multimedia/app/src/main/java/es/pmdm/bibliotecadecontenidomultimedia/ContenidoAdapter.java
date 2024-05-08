@@ -14,12 +14,13 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
+import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
 
-public class ContenidoAdapter extends ArrayAdapter<Contenido> {
+public class ContenidoAdapter extends ArrayAdapter<ContenidoDto> {
     private int mResource;
-    private ArrayList<Contenido> misContenidos;
+    private ArrayList<ContenidoDto> misContenidos;
 
-    public ContenidoAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Contenido> objects) {
+    public ContenidoAdapter(@NonNull Context context, int resource, @NonNull ArrayList<ContenidoDto> objects) {
         super(context, resource, objects);
         mResource = resource;
         misContenidos = objects;
@@ -38,10 +39,10 @@ public class ContenidoAdapter extends ArrayAdapter<Contenido> {
         txtAutor.setText(misContenidos.get(position).getAutor());
 
         TextView txtAnyo = miFila.findViewById(R.id.txtAno);
-        txtAutor.setText(misContenidos.get(position).getAnyo());
+        txtAnyo.setText(String.valueOf(misContenidos.get(position).getAnyo()));
 
         TextView txtcategoria = miFila.findViewById(R.id.txtGenero);
-        txtAutor.setText(misContenidos.get(position).getGenero());
+        txtcategoria.setText(misContenidos.get(position).getGenero());
 
         return miFila;
     }
