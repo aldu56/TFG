@@ -52,4 +52,9 @@ public class ApiManager {
         Call<UserDto> call = llamadaApi1.getUserById(idUser);
         call.enqueue(callback);
     }
+
+    public void updateUsers(int id, UserDto userDto, Callback<UserDto> callback){
+        Call<UserDto> call = llamadaApi1.updateUsers(id, userDto);
+        call.enqueue(callback);
+    }
 }

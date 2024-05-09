@@ -10,8 +10,11 @@ public interface IUserService {
     List<User> findAll();
     User findById(int id);
     User addUser(User user);
-    User updateUser(User user);
+    User updateUser(int id,User user);
     void deleteUser(User user);
 
     public User getUserByUsernameAndPassword(String username, String password);
+
+   // public void eliminarContenidoDeUsuario(int userId, int contenidoId);
+
 }

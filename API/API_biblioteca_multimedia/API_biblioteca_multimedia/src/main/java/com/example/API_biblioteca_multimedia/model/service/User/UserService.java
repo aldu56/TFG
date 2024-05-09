@@ -1,5 +1,6 @@
 package com.example.API_biblioteca_multimedia.model.service.User;
 
+import com.example.API_biblioteca_multimedia.exceptions.User.UserNotFoundException;
 import com.example.API_biblioteca_multimedia.model.entity.Contenido;
 import com.example.API_biblioteca_multimedia.model.entity.User;
 import com.example.API_biblioteca_multimedia.model.repository.IUserRepository;
@@ -30,8 +31,12 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public User updateUser(User user) {
-        return null;
+    public User updateUser(int id, User newUser) {
+        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Error al buscar el user " + id));
+
+        newUser.setId(user.getId());
+
+        return userRepository.save(newUser);
     }
 
     @Override
@@ -43,4 +48,9 @@ public class UserService implements IUserService{
     public User getUserByUsernameAndPassword(String username, String password) {
         return userRepository.getUserByUsernameAndPassword(username, password);
     }
+
+//    @Override
+//    public void eliminarContenidoDeUsuario(int userId, int contenidoId) {
+//
+//    }
 }

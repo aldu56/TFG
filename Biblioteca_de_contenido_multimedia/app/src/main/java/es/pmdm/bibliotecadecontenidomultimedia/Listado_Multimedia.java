@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
+import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
@@ -37,9 +39,10 @@ public class Listado_Multimedia extends AppCompatActivity {
     List<Contenido> listaGenerica;
 
     UserDto user;
+    int idUsuario;
 
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
-    ArrayList<ContenidoDto> listaPeliculas =  new ArrayList<>();
+    ArrayList<ContenidoDto> listaPeliculas = new ArrayList<>();
     ArrayList<ContenidoDto> listaSeries = new ArrayList<>();
     ArrayList<ContenidoDto> listaLibros = new ArrayList<>();
 
@@ -51,14 +54,13 @@ public class Listado_Multimedia extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_multimedia);
 
-        int idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
+       idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
 
         if (idUsuario != -1) {
 //            searchView = findViewById(R.id.search_bar);
             listView = (ListView) findViewById(R.id.listView);
             btnNueva = findViewById(R.id.btnNueva);
             apiManager = new ApiManager();
-
 
 
             obtenerListaUsuario(idUsuario);
@@ -84,9 +86,6 @@ public class Listado_Multimedia extends AppCompatActivity {
             });
 
 
-
-
-
             btnNueva.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -106,22 +105,22 @@ public class Listado_Multimedia extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-       getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.filtroPeli:
                 ordenarPorCategoria(contenidoUsuarios, 1);
                 break;
             case R.id.filtroSerie:
-                    ordenarPorCategoria(contenidoUsuarios, 2);
+                ordenarPorCategoria(contenidoUsuarios, 2);
                 break;
             case R.id.filtroLibro:
-                    ordenarPorCategoria(contenidoUsuarios, 3);
+                ordenarPorCategoria(contenidoUsuarios, 3);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -137,7 +136,7 @@ public class Listado_Multimedia extends AppCompatActivity {
                     return;
                 }
 
-                UserDto user = response.body();
+                user = response.body();
                 if (user != null) {
                     contenidoUsuarios.addAll(user.getContenidos());
                     contenidoAdapter.notifyDataSetChanged();
@@ -151,45 +150,101 @@ public class Listado_Multimedia extends AppCompatActivity {
         });
     }
 
-    public void ordenarPorCategoria(ArrayList<ContenidoDto> contenidoUsuario, int id){
-
-                for (ContenidoDto co :
-                        contenidoUsuario) {
-                    switch (id){
-                        case 1:
-                            if (co.getCategoria().equals(R.string.PELICULA)){
-                                listaPeliculas.add(co);
-                            }
-                            break;
-                        case 2:
-                            if (co.getCategoria().equals(R.string.SERIE)){
-                                listaSeries.add(co);
-                            }
-                            break;
-                        case 3:
-                            if (co.getCategoria().equals(R.string.LIBRO)){
-                                listaLibros.add(co);
-                            }
-                            break;
-                        default:
-                            break;
+    public void ordenarPorCategoria(ArrayList<ContenidoDto> contenidoUsuario, int id) {
+//TODO ARREGLAR
+        for (ContenidoDto co :
+                contenidoUsuario) {
+            switch (id) {
+                case 1:
+                    if (co.getCategoria().equals(R.string.PELICULA)) {
+                        listaPeliculas.add(co);
                     }
-                }
-                switch (id){
-                    case 1:
-                        contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaPeliculas);
-                        break;
-                    case 2:
-                        contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaSeries);
-                        break;
-                    case 3:
-                        contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaLibros);
-                        break;
-                    default:
-                        break;
-                }
-                contenidoAdapter.notifyDataSetChanged();
+                    break;
+                case 2:
+                    if (co.getCategoria().equals(R.string.SERIE)) {
+                        listaSeries.add(co);
+                    }
+                    break;
+                case 3:
+                    if (co.getCategoria().equals(R.string.LIBRO)) {
+                        listaLibros.add(co);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
 
+        switch (id) {
+            case 1:
+                contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaPeliculas);
+                break;
+            case 2:
+                contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaSeries);
+                break;
+            case 3:
+                contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaLibros);
+                break;
+            default:
+                break;
+        }
+        contenidoAdapter.notifyDataSetChanged();
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        getMenuInflater().inflate(R.menu.menu_contextual, menu);
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        final ContenidoDto contenido = (ContenidoDto) contenidoAdapter.getItem(info.position);
+
+        int id = item.getItemId();
+
+        if (id == R.id.eliminar) {
+            montarUserUpdateado(contenido);
+            updateUsuario(idUsuario, user);
+        }
+        return super.onContextItemSelected(item);
+    }
+
+    public void montarUserUpdateado(ContenidoDto contenido) {
+        List<ContenidoDto> contenidosUsuarioCambiar = user.getContenidos();
+
+        for (ContenidoDto c :
+                contenidosUsuarioCambiar) {
+            if (c.equals(contenido)) {
+                contenidosUsuarioCambiar.remove(c);
+            }
+        }
+        user.setContenidos(contenidosUsuarioCambiar);
+    }
+
+    public void updateUsuario(int id, UserDto userDto) {
+
+        System.out.println(id + ": " + userDto.toString());
+        apiManager.updateUsers(id, userDto, new Callback<UserDto>() {
+            @Override
+            public void onResponse(Call<UserDto> call, Response<UserDto> response) {
+                if (!response.isSuccessful()) {
+                    System.out.println("Fallo actualizando el usuario" + response.toString());
+                }else {
+                    Toast.makeText(Listado_Multimedia.this, "Lista actualizada correctamente", Toast.LENGTH_SHORT).show();
+                    obtenerListaUsuario(idUsuario);
+                    contenidoAdapter.notifyDataSetChanged();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<UserDto> call, Throwable t) {
+                System.err.println("FALLO EN updateUsuario (Listado_Multimedia)" + t.getMessage().toString());
+            }
+        });
     }
 
     public void obtenerListaGenerica() {

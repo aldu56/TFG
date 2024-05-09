@@ -13,4 +13,6 @@ public interface IUserRepository extends CrudRepository<User, Integer> {
 
     public User getUserByUsernameAndPassword(String username, String password);
 
+   // public void eliminarContenidoDeUsuario(int userId, int contenidoId);
+
 }

@@ -22,17 +22,17 @@
                 android:id="@+id/filtroPeli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:title="Item" />
+                android:title="@string/PELICULA" />
             <item
                 android:id="@+id/filtroSerie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:title="Item" />
+                android:title="@string/SERIE" />
             <item
                 android:id="@+id/filtroLibro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:title="Item" />
+                android:title="@string/LIBRO" />
         </menu>
     </item>
 

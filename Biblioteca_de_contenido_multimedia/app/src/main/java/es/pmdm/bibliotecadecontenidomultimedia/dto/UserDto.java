@@ -45,5 +45,14 @@ public class UserDto implements Serializable {
     public void setContenidos(List<ContenidoDto> contenidos) {
         this.contenidos = contenidos;
     }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", contenidos=" + contenidos.toString() +
+                '}';
+    }
 }
 
