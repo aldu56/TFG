@@ -88,5 +88,13 @@ public class ContenidoController {
         return new ResponseEntity<>(contenidosDTO, HttpStatus.OK);
     }
 
+    @GetMapping("/contenidoByTitulo/{titulo}")
+    public ResponseEntity<ContenidoDTO> getContenidoByTitulo(@PathVariable String titulo){
+        Contenido contenido = contenidoService.getContenidoByTitulo(titulo);
+        ContenidoDTO contenidoDTO = contenidoMapper.toDto(contenido);
+        return new ResponseEntity<>(contenidoDTO, HttpStatus.OK);
+    }
+
+
 
 }

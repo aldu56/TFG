@@ -37,15 +37,12 @@ public class Listado_Multimedia extends AppCompatActivity {
     ApiManager apiManager;
 
     List<Contenido> listaGenerica;
+    ArrayList<ContenidoDto> contenidosAuxiliar = new ArrayList<ContenidoDto>();
 
     UserDto user;
     int idUsuario;
 
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
-    ArrayList<ContenidoDto> listaPeliculas = new ArrayList<>();
-    ArrayList<ContenidoDto> listaSeries = new ArrayList<>();
-    ArrayList<ContenidoDto> listaLibros = new ArrayList<>();
-
     ContenidoAdapter contenidoAdapter;
 
 
@@ -69,6 +66,7 @@ public class Listado_Multimedia extends AppCompatActivity {
             contenidoAdapter = new ContenidoAdapter(this, R.layout.item_view, contenidoUsuarios);
 
 
+
             listView.setAdapter(contenidoAdapter);
             contenidoAdapter.notifyDataSetChanged();
 
@@ -79,9 +77,18 @@ public class Listado_Multimedia extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                    Intent intent = new Intent(Listado_Multimedia.this, Datos_Multimedia.class);
-                    intent.putExtra("POSICION", position);
-                    startActivity(intent);
+                    ContenidoDto contenidoSeleccionado = contenidoAdapter.getItem(position);
+
+                    if (contenidoSeleccionado != null) {
+                        // Obtener el título del contenido seleccionado
+                        String titulo = contenidoSeleccionado.getTitulo();
+
+                        // Crear el intent y pasar el título como extra
+                        Intent intent = new Intent(Listado_Multimedia.this, Datos_Multimedia.class);
+                        intent.putExtra("TITULO", titulo);
+                        intent.putExtra("ID_USER", idUsuario);
+                        startActivity(intent);
+                    }
                 }
             });
 
@@ -111,7 +118,6 @@ public class Listado_Multimedia extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         switch (item.getItemId()) {
             case R.id.filtroPeli:
                 ordenarPorCategoria(contenidoUsuarios, 1);
@@ -126,8 +132,50 @@ public class Listado_Multimedia extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void ordenarPorCategoria(ArrayList<ContenidoDto> contenidoUsuario, int id) {
+
+        contenidoUsuarios.clear();
+        contenidoUsuarios.addAll(contenidosAuxiliar);
+
+        ArrayList<ContenidoDto> listaFiltrada = new ArrayList<>();
+
+        // Filtrar contenidoUsuario según la categoría seleccionada
+        for (ContenidoDto co : contenidoUsuario) {
+            switch (id) {
+                case 1:
+                    if (co.getCategoria().equalsIgnoreCase("Pelicula")) {
+                        listaFiltrada.add(co);
+                    }
+                    break;
+                case 2:
+                    if (co.getCategoria().equalsIgnoreCase("Serie")) {
+                        listaFiltrada.add(co);
+                    }
+                    break;
+                case 3:
+                    if (co.getCategoria().equalsIgnoreCase("Libro")) {
+                        listaFiltrada.add(co);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Si la lista filtrada no está vacía, actualiza el adaptador
+        if (!listaFiltrada.isEmpty()) {
+            contenidoAdapter.clear();
+            contenidoAdapter.addAll(listaFiltrada);
+            contenidoAdapter.notifyDataSetChanged();
+        } else {
+            // Si la lista filtrada está vacía, muestra un mensaje o realiza alguna acción
+            Toast.makeText(this, "No se encontraron contenidos para esta categoría.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     public void obtenerListaUsuario(int userId) {
+
         apiManager.getUserById(userId, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
@@ -138,7 +186,9 @@ public class Listado_Multimedia extends AppCompatActivity {
 
                 user = response.body();
                 if (user != null) {
+                    contenidoUsuarios.clear();
                     contenidoUsuarios.addAll(user.getContenidos());
+                    contenidosAuxiliar.addAll(user.getContenidos());
                     contenidoAdapter.notifyDataSetChanged();
                 }
             }
@@ -150,47 +200,7 @@ public class Listado_Multimedia extends AppCompatActivity {
         });
     }
 
-    public void ordenarPorCategoria(ArrayList<ContenidoDto> contenidoUsuario, int id) {
-//TODO ARREGLAR
-        for (ContenidoDto co :
-                contenidoUsuario) {
-            switch (id) {
-                case 1:
-                    if (co.getCategoria().equals(R.string.PELICULA)) {
-                        listaPeliculas.add(co);
-                    }
-                    break;
-                case 2:
-                    if (co.getCategoria().equals(R.string.SERIE)) {
-                        listaSeries.add(co);
-                    }
-                    break;
-                case 3:
-                    if (co.getCategoria().equals(R.string.LIBRO)) {
-                        listaLibros.add(co);
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
 
-        switch (id) {
-            case 1:
-                contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaPeliculas);
-                break;
-            case 2:
-                contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaSeries);
-                break;
-            case 3:
-                contenidoAdapter = new ContenidoAdapter(Listado_Multimedia.this, R.layout.item_view, listaLibros);
-                break;
-            default:
-                break;
-        }
-        contenidoAdapter.notifyDataSetChanged();
-
-    }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -200,6 +210,8 @@ public class Listado_Multimedia extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+        //TODO ARREGLAR
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         final ContenidoDto contenido = (ContenidoDto) contenidoAdapter.getItem(info.position);
 

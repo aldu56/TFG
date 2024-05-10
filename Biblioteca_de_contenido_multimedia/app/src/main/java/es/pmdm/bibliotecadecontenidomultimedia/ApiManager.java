@@ -1,6 +1,5 @@
 package es.pmdm.bibliotecadecontenidomultimedia;
 
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -10,15 +9,16 @@ import java.util.List;
 import es.pmdm.bibliotecadecontenidomultimedia.Interface.LlamadasApi;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
+import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiManager {
-    private static final String BASE_URL = "http://192.168.1.66:8080/api/";
+    private static final String BASE_URL = "http://192.168.1.64:8080/api/";
     private LlamadasApi llamadaApi1;
 
     public ApiManager() {
@@ -55,6 +55,11 @@ public class ApiManager {
 
     public void updateUsers(int id, UserDto userDto, Callback<UserDto> callback){
         Call<UserDto> call = llamadaApi1.updateUsers(id, userDto);
+        call.enqueue(callback);
+    }
+
+    public void getContenidoByTitulo(String titulo, Callback<ContenidoDto> callback){
+        Call<ContenidoDto> call = llamadaApi1.getContenidoByTitulo(titulo);
         call.enqueue(callback);
     }
 }

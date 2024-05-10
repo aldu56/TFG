@@ -41,8 +41,11 @@ public class ContenidoAdapter extends ArrayAdapter<ContenidoDto> {
         TextView txtAnyo = miFila.findViewById(R.id.txtAno);
         txtAnyo.setText(String.valueOf(misContenidos.get(position).getAnyo()));
 
-        TextView txtcategoria = miFila.findViewById(R.id.txtGenero);
-        txtcategoria.setText(misContenidos.get(position).getGenero());
+        TextView txtgenero = miFila.findViewById(R.id.txtGenero);
+        txtgenero.setText(misContenidos.get(position).getGenero());
+
+        TextView txtCategoria = miFila.findViewById(R.id.txtCategoria);
+        txtCategoria.setText(misContenidos.get(position).getCategoria());
 
         return miFila;
     }

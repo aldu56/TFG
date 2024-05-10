@@ -33,4 +33,5 @@ public class ContenidoDTO implements Serializable{
 
     private String comentario;
 
+
 }

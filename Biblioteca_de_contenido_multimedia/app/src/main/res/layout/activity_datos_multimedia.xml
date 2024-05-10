@@ -8,6 +8,21 @@
     android:backgroundTint="@color/mirojo"
     tools:context=".Datos_Multimedia">
 
+    <Button
+        android:id="@+id/buttonAceptar"
+        android:layout_width="110dp"
+        android:layout_height="44dp"
+        android:backgroundTint="@color/miamarillo"
+        android:text="GUARDAR"
+        android:textSize="10sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621" />
+
     <TextView
         android:id="@+id/textViewTitulo"
         android:layout_width="223dp"
@@ -37,7 +52,7 @@
         app:layout_constraintVertical_bias="0.163" />
 
     <TextView
-        android:id="@+id/textViewCategoria"
+        android:id="@+id/txtGen"
         android:layout_width="200dp"
         android:layout_height="22dp"
         android:text="TextView"
@@ -64,29 +79,16 @@
 
     <TextView
         android:id="@+id/textViewDescripcion"
-        android:layout_width="277dp"
-        android:layout_height="149dp"
+        android:layout_width="302dp"
+        android:layout_height="85dp"
         android:text="TextView"
         android:textColor="#8A8A8A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
-
-    <TextView
-        android:id="@+id/textViewClase"
-        android:layout_width="137dp"
-        android:layout_height="46dp"
-        android:text="TextView"
-        android:textColor="#8A8A8A"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.343" />
 
     <TextView
         android:id="@+id/textViewAn"
@@ -103,10 +105,10 @@
         app:layout_constraintVertical_bias="0.163" />
 
     <TextView
-        android:id="@+id/textViewCa"
+        android:id="@+id/textViewGenero"
         android:layout_width="105dp"
         android:layout_height="22dp"
-        android:text="Categoría:"
+        android:text="Género:"
         android:textColor="#8A8A8A"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -209,10 +211,10 @@
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.473" />
 
     <RatingBar
         android:id="@+id/ratingBar"

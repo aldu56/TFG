@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class ContenidoDto implements Serializable {
 
     //  titulo, anyo, autor, genero, url, duracion, descripcion, puntuacion y comentario.
-
+private int id;
     private String titulo;
 
     private int anyo;
@@ -28,7 +28,8 @@ public class ContenidoDto implements Serializable {
     public ContenidoDto() {
     }
 
-    public ContenidoDto(String titulo, int anyo, String autor, String genero, String url, String duracion, String descripcion, float puntuacion, String comentario, String categoria) {
+    public ContenidoDto(int id, String titulo, int anyo, String autor, String genero, String url, String duracion, String descripcion, float puntuacion, String comentario, String categoria) {
+        this.id = id;
         this.titulo = titulo;
         this.anyo = anyo;
         this.autor = autor;
@@ -39,6 +40,14 @@ public class ContenidoDto implements Serializable {
         this.puntuacion = puntuacion;
         this.comentario = comentario;
         this.categoria = categoria;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitulo() {
@@ -124,7 +133,8 @@ public class ContenidoDto implements Serializable {
     @Override
     public String toString() {
         return "ContenidoDto{" +
-                "titulo='" + titulo + '\'' +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
                 ", anyo=" + anyo +
                 ", autor='" + autor + '\'' +
                 ", genero='" + genero + '\'' +
