@@ -1,5 +1,6 @@
 package es.pmdm.bibliotecadecontenidomultimedia.Interface;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
@@ -24,7 +25,7 @@ public interface  LlamadasApi {
     Call<List<Contenido>> getContenidoByCategoria(String categoria);
 
     @GET("contenidosNormales")
-    Call<List<Contenido>> getContenidos();
+    Call<ArrayList<ContenidoDto>> getContenidos();
 
     @GET("userById/{id}")
     Call<UserDto> getUserById(@Path("id") int id);

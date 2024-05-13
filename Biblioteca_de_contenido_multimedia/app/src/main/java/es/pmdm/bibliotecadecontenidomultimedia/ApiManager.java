@@ -4,6 +4,7 @@ package es.pmdm.bibliotecadecontenidomultimedia;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Interface.LlamadasApi;
@@ -18,7 +19,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiManager {
-    private static final String BASE_URL = "http://192.168.1.64:8080/api/";
+    private static final String BASE_URL = "http://192.168.1.66:8080/api/";
     private LlamadasApi llamadaApi1;
 
     public ApiManager() {
@@ -43,8 +44,8 @@ public class ApiManager {
         call.enqueue(callback);
     }
 
-    public void getContenidos(Callback<List<Contenido>> callback){
-        Call<List<Contenido>> call = llamadaApi1.getContenidos();
+    public void getContenidos(Callback<ArrayList<ContenidoDto>> callback){
+        Call<ArrayList<ContenidoDto>> call = llamadaApi1.getContenidos();
         call.enqueue(callback);
     }
 

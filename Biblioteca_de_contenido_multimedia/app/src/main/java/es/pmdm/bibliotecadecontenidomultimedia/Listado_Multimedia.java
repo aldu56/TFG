@@ -36,7 +36,6 @@ public class Listado_Multimedia extends AppCompatActivity {
     FloatingActionButton btnNueva;
     ApiManager apiManager;
 
-    List<Contenido> listaGenerica;
     ArrayList<ContenidoDto> contenidosAuxiliar = new ArrayList<ContenidoDto>();
 
     UserDto user;
@@ -259,25 +258,6 @@ public class Listado_Multimedia extends AppCompatActivity {
         });
     }
 
-    public void obtenerListaGenerica() {
-        apiManager.getContenidos(new Callback<List<Contenido>>() {
-            @Override
-            public void onResponse(Call<List<Contenido>> call, Response<List<Contenido>> response) {
-                if (!response.isSuccessful()) {
-                    Toast.makeText(Listado_Multimedia.this, "Codigo:  " + response.code(), Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                listaGenerica = response.body();
-                if (listaGenerica != null) {
-                    // Aquí puedes realizar cualquier manipulación adicional que necesites con la listaGenerica
-                }
-            }
 
-            @Override
-            public void onFailure(Call<List<Contenido>> call, Throwable t) {
-                Toast.makeText(Listado_Multimedia.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
 }

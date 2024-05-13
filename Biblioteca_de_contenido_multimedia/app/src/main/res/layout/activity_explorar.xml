@@ -6,17 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Explorar">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvExplorar"
-        android:layout_width="414dp"
-        android:layout_height="733dp"
+    <ListView
+        android:id="@+id/listViewEx"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
         android:background="@color/mirojo"
         android:backgroundTint="@color/mirojo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

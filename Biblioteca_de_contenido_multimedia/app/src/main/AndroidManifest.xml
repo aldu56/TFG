@@ -21,7 +21,8 @@
             android:exported="false" />
         <activity
             android:name=".Explorar"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:name=".Listado_Multimedia"
             android:exported="false"

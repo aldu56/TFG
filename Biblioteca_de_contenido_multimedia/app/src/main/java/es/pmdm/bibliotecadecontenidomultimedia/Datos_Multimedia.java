@@ -2,12 +2,16 @@ package es.pmdm.bibliotecadecontenidomultimedia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
@@ -33,7 +37,7 @@ public class Datos_Multimedia extends AppCompatActivity {
 
     ApiManager apiManager;
     ContenidoDto contenidoDto;
-    List<ContenidoDto> contenidosUsuario;
+    ArrayList<ContenidoDto> contenidosUsuario =  new ArrayList<ContenidoDto>();
     UserDto user;
     String titulo;
     ContenidoDto contenido;
@@ -69,10 +73,26 @@ public class Datos_Multimedia extends AppCompatActivity {
             } else {
                 titulo = extras.getString("TITULO");
                 idUser = getIntent().getExtras().getInt("ID_USER");
+                System.out.println(idUser + " ID DEL USUARIO");
+                System.out.println(titulo + "TITULO DEL CONTENIDO");
                 obtenerListaUsuario(idUser);
             }
         }
 
+        buttonVisitar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(contenido.getUrl()));
+                startActivity(intent);
+            }
+        });
+
+        buttonVolverALaPrincipal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
@@ -93,6 +113,7 @@ public class Datos_Multimedia extends AppCompatActivity {
                     System.out.println("VAAA");
                     for (ContenidoDto con:
                          user.getContenidos()) {
+                        System.out.println(con.toString());
                         contenidosUsuario.add(con);
                     }
                     montarDatosContenido();
@@ -131,7 +152,7 @@ public class Datos_Multimedia extends AppCompatActivity {
 
         for (ContenidoDto c:
              contenidosUsuario) {
-            if(c.getTitulo().equalsIgnoreCase(titulo)){
+            if(c.getTitulo().toString().equalsIgnoreCase(titulo)){
                 contenido = c;
             }
         }
@@ -139,13 +160,14 @@ public class Datos_Multimedia extends AppCompatActivity {
 
         textViewTitulo.setText(contenido.getTitulo());
         textViewDirector.setText(contenido.getAutor());
-        textViewAno.setText(contenido.getAnyo());
+        textViewAno.setText(String.valueOf(contenido.getAnyo()));
         txtGen.setText(contenido.getGenero());
         textViewDuracion.setText(contenido.getDuracion());
         textViewDescripcion.setText(contenido.getDescripcion());
-        edComent.setText(contenido.getComentario());
-        txtComent.setText(contenido.getComentario());
     }
+
+
+    //TODO MODIFICAR LISTA CONTENIDO PERSONAL; PONER COMENTARIO Y VALORACION.
 
 
 }

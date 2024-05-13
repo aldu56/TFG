@@ -36,6 +36,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().hide();
+
+
         apiManager = new ApiManager();
 
         edUsername = findViewById(R.id.edUser);
