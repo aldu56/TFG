@@ -22,7 +22,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
 
     <EditText
         android:id="@+id/edUsername"
@@ -30,16 +31,16 @@
         android:layout_height="43dp"
         android:background="@drawable/custom_edt"
         android:drawableLeft="@drawable/usericon"
-        android:paddingLeft="5dp"
         android:ems="10"
         android:hint="  Username..."
         android:inputType="text"
+        android:paddingLeft="5dp"
         android:textColorHint="#9F9F9F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintVertical_bias="0.364" />
 
     <Button
         android:id="@+id/btnRegistrarse"

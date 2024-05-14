@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Multimedia Library</string>
+    <string name="Acerca_de">About...</string>
+    <string name="PELICULA">Pelicula</string>
+    <string name="SERIE">Serie</string>
+    <string name="LIBRO">Libro</string>
+    <string name="title_activity_listado_multimedia">Multimedia_List</string>
+
+    <string name="buscadorHint">Type to search...</string>
+
+</resources>

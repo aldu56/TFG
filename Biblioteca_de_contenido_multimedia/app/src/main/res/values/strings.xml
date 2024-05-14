@@ -2,23 +2,14 @@
     <string name="app_name">Biblioteca de contenido multimedia</string>
 
     <string name="Acerca_de">Acerca de...</string>
-    <string name="Nueva_peli">Nueva Pelicula</string>
 
-    <string-array name="opcionesGenero">
-        <item>Accion</item>
-        <item>Comedia</item>
-        <item>Drama</item>
-        <item>Ciencia Ficcion</item>
-        <item>Horror</item>
-        <item>Crimen</item>
-        <item>Suspenso</item>
-        <item>Fantasia</item>
-        <item>Belica</item>
-    </string-array>
     <!-- TODO PONER STRINGS PELICULA, SERIE, LIBRO-->
     <string name="PELICULA">Pelicula</string>
     <string name="SERIE">Serie</string>
     <string name="LIBRO">Libro</string>
+
+
+    <string name="buscadorHint">Escribe para buscar...</string>
 
 
     <string-array name="opcionesFormato">

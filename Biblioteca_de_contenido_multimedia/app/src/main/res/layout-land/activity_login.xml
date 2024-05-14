@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/fondillo"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".Login">
 
     <EditText
         android:id="@+id/edPassword"
@@ -22,24 +22,41 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.611" />
 
     <EditText
-        android:id="@+id/edUsername"
+        android:id="@+id/edUser"
         android:layout_width="311dp"
         android:layout_height="43dp"
         android:background="@drawable/custom_edt"
         android:drawableLeft="@drawable/usericon"
-        android:paddingLeft="5dp"
         android:ems="10"
         android:hint="  Username..."
         android:inputType="text"
+        android:paddingLeft="5dp"
         android:textColorHint="#9F9F9F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintVertical_bias="0.456" />
+
+    <Button
+        android:id="@+id/btnAcceder"
+        android:layout_width="227dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#5D0C1D"
+        android:shadowDy="3"
+        android:text="Acceder"
+        android:textColor="#CCB38D"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769" />
 
     <Button
         android:id="@+id/btnRegistrarse"
@@ -51,8 +68,21 @@
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
+        app:layout_constraintVertical_bias="0.895" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="272dp"
+        android:layout_height="121dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

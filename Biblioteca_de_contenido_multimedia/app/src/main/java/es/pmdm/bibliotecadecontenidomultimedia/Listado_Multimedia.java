@@ -112,6 +112,29 @@ public class Listado_Multimedia extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        MenuItem menuItem = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+
+        // Obtiene el String de strings desde los recursos
+        String sugerenciasBusqueda = getResources().getString(R.string.buscadorHint);
+
+        // Asigna la sugerencia de búsqueda al SearchView
+        searchView.setQueryHint(sugerenciasBusqueda);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                contenidoAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
+
         return super.onCreateOptionsMenu(menu);
     }
 
