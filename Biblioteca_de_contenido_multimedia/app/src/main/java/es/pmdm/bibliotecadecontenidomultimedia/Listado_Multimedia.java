@@ -276,7 +276,7 @@ public class Listado_Multimedia extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<UserDto> call, Throwable t) {
-                System.err.println("FALLO EN updateUsuario (Listado_Multimedia)" + t.getMessage().toString());
+                System.out.println("FALLO EN updateUsuario (Listado_Multimedia)" + t.getMessage().toString());
             }
         });
     }

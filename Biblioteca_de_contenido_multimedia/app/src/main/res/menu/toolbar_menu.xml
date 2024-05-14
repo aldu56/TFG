@@ -8,7 +8,7 @@
         android:id="@+id/search"
         android:icon="@drawable/baseline_search_24"
         app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+        app:actionViewClass="android.widget.SearchView"/>
 
     <item
         android:id="@+id/filtro"

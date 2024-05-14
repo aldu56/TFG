@@ -32,7 +32,7 @@ public class Explorar extends AppCompatActivity {
 
     ContenidoAdapter contenidoAdapter;
 
-    ApiManager apiManager;
+    ApiManager apiManager =  new ApiManager();
     int idUsuario;
     UserDto user;
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
@@ -147,6 +147,15 @@ public class Explorar extends AppCompatActivity {
                 default:
                     break;
             }
+        }
+        // Si la lista filtrada no está vacía, actualiza el adaptador
+        if (!listaFiltrada.isEmpty()) {
+            contenidoAdapter.clear();
+            contenidoAdapter.addAll(listaFiltrada);
+            contenidoAdapter.notifyDataSetChanged();
+        } else {
+            // Si la lista filtrada está vacía, muestra un mensaje o realiza alguna acción
+            Toast.makeText(this, "No se encontraron contenidos para esta categoría.", Toast.LENGTH_SHORT).show();
         }
     }
 

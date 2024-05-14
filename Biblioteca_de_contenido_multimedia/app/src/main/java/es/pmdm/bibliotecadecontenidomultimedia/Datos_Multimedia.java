@@ -106,11 +106,8 @@ public class Datos_Multimedia extends AppCompatActivity {
                     Toast.makeText(Datos_Multimedia.this, "Codigo (Listado_Multimedia) :  " + response.code(), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-
                 user = response.body();
                 if (user != null) {
-                    System.out.println("VAAA");
                     for (ContenidoDto con:
                          user.getContenidos()) {
                         System.out.println(con.toString());
@@ -142,7 +139,7 @@ public class Datos_Multimedia extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ContenidoDto> call, Throwable t) {
-                System.err.println("FALLO en getContenidoByTitulo (Datos_Multimedia): " + t.getMessage().toString());
+                System.out.println("FALLO en getContenidoByTitulo (Datos_Multimedia): " + t.getMessage().toString());
             }
         });
 
