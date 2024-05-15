@@ -113,6 +113,7 @@ public class Listado_Multimedia extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         MenuItem menuItem = menu.findItem(R.id.search);
+
         SearchView searchView = (SearchView) menuItem.getActionView();
 
         // Obtiene el String de strings desde los recursos
@@ -129,8 +130,8 @@ public class Listado_Multimedia extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                contenidoAdapter.getFilter().filter(newText);
-                return false;
+                contenidoAdapter.filterByTitle(newText); // Aplicar filtro por título
+                return true;
             }
         });
 
@@ -140,16 +141,24 @@ public class Listado_Multimedia extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.filtroPeli:
-                ordenarPorCategoria(contenidoUsuarios, 1);
-                break;
-            case R.id.filtroSerie:
-                ordenarPorCategoria(contenidoUsuarios, 2);
-                break;
-            case R.id.filtroLibro:
-                ordenarPorCategoria(contenidoUsuarios, 3);
-                break;
+        if (item.getItemId() == R.id.mas) {
+            Intent intnet = new Intent(Listado_Multimedia.this, More.class);
+            startActivity(intnet);
+        }else if (item.getItemId() == R.id.about){
+            Intent intnet = new Intent(Listado_Multimedia.this, About.class);
+            startActivity(intnet);
+        }else {
+            switch (item.getItemId()) {
+                case R.id.filtroPeli:
+                    ordenarPorCategoria(contenidoUsuarios, 1);
+                    break;
+                case R.id.filtroSerie:
+                    ordenarPorCategoria(contenidoUsuarios, 2);
+                    break;
+                case R.id.filtroLibro:
+                    ordenarPorCategoria(contenidoUsuarios, 3);
+                    break;
+            }
         }
         return super.onOptionsItemSelected(item);
     }

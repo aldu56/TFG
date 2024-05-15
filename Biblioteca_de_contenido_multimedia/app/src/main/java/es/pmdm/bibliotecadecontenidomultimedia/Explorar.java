@@ -32,7 +32,7 @@ public class Explorar extends AppCompatActivity {
 
     ContenidoAdapter contenidoAdapter;
 
-    ApiManager apiManager =  new ApiManager();
+    ApiManager apiManager = new ApiManager();
     int idUsuario;
     UserDto user;
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
@@ -76,7 +76,7 @@ public class Explorar extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        getMenuInflater().inflate(R.menu.toolbar_menu2, menu);
         MenuItem menuItem = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) menuItem.getActionView();
 
@@ -94,8 +94,8 @@ public class Explorar extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                contenidoAdapter.getFilter().filter(newText);
-                return false;
+                contenidoAdapter.filterByTitle(newText); // Aplicar filtro por título
+                return true;
             }
         });
 

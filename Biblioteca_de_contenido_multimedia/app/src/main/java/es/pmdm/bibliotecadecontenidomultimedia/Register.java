@@ -41,7 +41,6 @@ public class Register extends AppCompatActivity {
         getSupportActionBar().setTitle("Registrarse");
 
 
-
         apiManager = new ApiManager();
 
         edUsername = findViewById(R.id.edUsername);
@@ -67,17 +66,7 @@ public class Register extends AppCompatActivity {
 
     private void addUser(UserDto userDto) {
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.66:8080/api/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        llamadasApi = retrofit.create(LlamadasApi.class);
-
-        System.out.println(userDto);
-
-        Call<User> call = llamadasApi.createUser(userDto);
-        call.enqueue(new Callback<User>() {
+        apiManager.createUser(userDto, new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if (!response.isSuccessful()) {
@@ -99,8 +88,6 @@ public class Register extends AppCompatActivity {
                 Log.e("Throw err: ", t.getMessage());
             }
         });
-
-
     }
 
 

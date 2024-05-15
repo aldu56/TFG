@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
@@ -48,5 +49,22 @@ public class ContenidoAdapter extends ArrayAdapter<ContenidoDto> {
         txtCategoria.setText(misContenidos.get(position).getCategoria());
 
         return miFila;
+    }
+
+    public void filterByTitle(String query) {
+        List<ContenidoDto> filteredList = new ArrayList<>();
+        if (query.isEmpty()) {
+            filteredList.addAll(misContenidos); // originalList es la lista sin filtrar
+        } else {
+            String lowerCaseQuery = query.toLowerCase().trim();
+            for (ContenidoDto item : misContenidos) {
+                if (item.getTitulo().toLowerCase().contains(lowerCaseQuery)) {
+                    filteredList.add(item);
+                }
+            }
+        }
+        clear();
+        addAll(filteredList);
+        notifyDataSetChanged();
     }
 }

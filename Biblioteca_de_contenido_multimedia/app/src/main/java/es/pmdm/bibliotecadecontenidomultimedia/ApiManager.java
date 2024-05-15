@@ -38,6 +38,11 @@ public class ApiManager {
         call.enqueue(callback);
     }
 
+    public void createUser(UserDto userDto, Callback<User> callback) {
+        Call<User> call = llamadaApi1.createUser(userDto);
+        call.enqueue(callback);
+    }
+
 
     public void getContenidoByCategoria(String categoria, Callback<List<Contenido>> callback){
         Call<List<Contenido>> call = llamadaApi1.getContenidoByCategoria(categoria);

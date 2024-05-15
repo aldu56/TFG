@@ -8,5 +8,9 @@
     <string name="title_activity_listado_multimedia">Multimedia_List</string>
 
     <string name="buscadorHint">Type to search...</string>
+    <string name="InicioDeSesion">Log In</string>
+<string name="mas">More...</string>
+    <string name="about">About me...</string>
+
 
 </resources>

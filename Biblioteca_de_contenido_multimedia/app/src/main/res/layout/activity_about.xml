@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondillo"
+    app:circularflow_defaultRadius="10dp"
+    app:circularflow_radiusInDP="10dp"
+    app:layout_constraintCircleRadius="10dp"
+    tools:context=".About">
+
+    <TextView
+        android:id="@+id/textViewCreadaPor"
+        android:layout_width="329dp"
+        android:layout_height="98dp"
+        android:text="Creada por Alberto Andújar"
+        android:textAlignment="center"
+        android:textColor="@color/miamarillo"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="259dp"
+        android:layout_height="265dp"
+        android:textAlignment="inherit"
+        app:circularflow_radiusInDP="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377"
+        tools:srcCompat="@drawable/logo"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/buttonIrAlSitioWeb"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/miamarillo"
+        android:text="IR AL SITIO WEB"
+        android:textColor="#000000"
+        app:circularflow_defaultRadius="0dp"
+        app:circularflow_radiusInDP="0dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769" />
+
+    <Button
+        android:id="@+id/buttonObtenerSoporte"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/miamarillo"
+        android:text="OBTENER SOPORTE"
+        android:textColor="#000000"
+        app:circularflow_defaultRadius="0dp"
+        app:circularflow_radiusInDP="0dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852" />
+
+    <Button
+        android:id="@+id/buttonVolver"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/miamarillo"
+        android:insetTop="0px"
+        android:insetBottom="0px"
+        android:text="VOLVER"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
+</androidx.constraintlayout.widget.ConstraintLayout>

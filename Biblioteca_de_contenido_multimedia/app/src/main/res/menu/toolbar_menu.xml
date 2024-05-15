@@ -39,8 +39,23 @@
 
 
     <item
-        android:title="Categoria"
-        android:id="@+id/txtGenero"
-        android:icon="@drawable/baseline_menu_24"
-        app:showAsAction="ifRoom"/>
+        android:title="More..."
+        android:id="@+id/txtMore"
+        android:icon="@drawable/baseline_more_vert_24"
+        app:showAsAction="ifRoom">
+        <menu
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <item
+                android:id="@+id/mas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/mas" />
+            <item
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/about" />
+        </menu>
+    </item>
 </menu>

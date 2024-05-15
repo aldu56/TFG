@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:title="Search"
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_search_24"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.widget.SearchView"/>
+
+    <item
+        android:id="@+id/filtro"
+        android:icon="@drawable/baseline_filter_alt_24"
+        android:title="Filtro"
+        app:showAsAction="ifRoom"
+        >
+        <menu
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <item
+                android:id="@+id/filtroPeli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/PELICULA" />
+            <item
+                android:id="@+id/filtroSerie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/SERIE" />
+            <item
+                android:id="@+id/filtroLibro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/LIBRO" />
+        </menu>
+    </item>
+
+
+</menu>

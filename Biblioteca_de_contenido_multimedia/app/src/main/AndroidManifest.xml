@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,37 +14,44 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BibliotecaDeContenidoMultimedia"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31"
-        >
+        tools:targetApi="31">
+        <activity
+            android:name=".About"
+            android:exported="false" />
+        <activity
+            android:name=".More"
+            android:exported="false" />
         <activity
             android:name=".Mas_Info"
             android:exported="false" />
         <activity
             android:name=".Explorar"
             android:exported="false"
-            />
+            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
             android:name=".Listado_Multimedia"
             android:exported="false"
             android:label="@string/title_activity_listado_multimedia"
-            android:theme="@style/Theme.BibliotecaDeContenidoMultimedia">
-        </activity>
+            android:theme="@style/Theme.BibliotecaDeContenidoMultimedia"
+            android:title="Contenidos"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
             android:name=".Datos_Multimedia"
             android:exported="false" />
         <activity
             android:name=".Register"
-            android:exported="false" />
+            android:exported="false"
+            android:title="Register" />
         <activity
             android:name=".Login"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="true"
+            android:title="Log In">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        />
     </application>
 
 </manifest>
