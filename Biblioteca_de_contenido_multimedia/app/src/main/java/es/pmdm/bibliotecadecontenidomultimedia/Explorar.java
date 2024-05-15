@@ -43,6 +43,9 @@ public class Explorar extends AppCompatActivity {
         setContentView(R.layout.activity_explorar);
         idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
 
+        getSupportActionBar().setTitle("Explorar contenido");
+
+
 
         listView = (ListView) findViewById(R.id.listViewEx);
 
@@ -67,8 +70,22 @@ public class Explorar extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ContenidoDto contenidoSeleccionado = contenidoAdapter.getItem(position);
-                montarUserUpdateado(contenidoSeleccionado);
-                updateUsuario(idUsuario, user);
+                boolean contenidoYaEnLista = false;
+
+
+                for (ContenidoDto contenido : contenidoUsuarios) {
+                    if (contenido.getTitulo().equalsIgnoreCase(contenidoSeleccionado.getTitulo())) {
+                        contenidoYaEnLista = true;
+                        break; // Salir del bucle tan pronto como encuentres un contenido igual
+                    }
+                }
+
+                if (contenidoYaEnLista) {
+                    Toast.makeText(Explorar.this, "El contenido ya está en tu lista", Toast.LENGTH_SHORT).show();
+                } else {
+                    montarUserUpdateado(contenidoSeleccionado);
+                    updateUsuario(idUsuario, user);
+                }
             }
         });
     }
@@ -94,11 +111,50 @@ public class Explorar extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                contenidoAdapter.filterByTitle(newText); // Aplicar filtro por título
+                if (newText.isEmpty()) {
+                    // Si el texto de búsqueda está vacío, restaurar la lista completa
+                    contenidoAdapter.clear();
+                    contenidoAdapter.addAll(listaContenidosAuxiliar);
+                    contenidoAdapter.notifyDataSetChanged();
+                } else {
+                    // Aplicar filtro por título
+                    contenidoAdapter.filterByTitle(newText);
+                }
                 return true;
             }
         });
 
+        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                // Si no hay ningún elemento mostrándose, restaurar la lista completa
+                if (contenidoAdapter.getCount() == 0) {
+                    contenidoAdapter.clear();
+                    contenidoAdapter.addAll(listaContenidosAuxiliar);
+                    contenidoAdapter.notifyDataSetChanged();
+                }
+                return false;
+            }
+        });
+        menuItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                // No necesitamos realizar ninguna acción cuando el SearchView se expande
+                return true;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                // Limpiar el texto del SearchView cuando se colapsa
+                if (contenidoAdapter.getCount() == 0) {
+                    searchView.setQuery("", false);
+                    contenidoAdapter.clear();
+                    contenidoAdapter.addAll(listaContenidosAuxiliar);
+                    contenidoAdapter.notifyDataSetChanged();
+                }
+                return true;
+            }
+        });
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -231,6 +287,8 @@ public class Explorar extends AppCompatActivity {
                 } else {
                     Toast.makeText(Explorar.this, "El contenido se ha añadido correctamente. ", Toast.LENGTH_SHORT).show();
                     obtenerListaUsuario(idUsuario);
+                    contenidoAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
+
                 }
 
             }

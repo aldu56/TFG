@@ -130,12 +130,38 @@ public class Listado_Multimedia extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                contenidoAdapter.filterByTitle(newText); // Aplicar filtro por título
+                if (newText.isEmpty()) {
+                    // Si el texto de búsqueda está vacío, restaurar la lista completa
+                    contenidoAdapter.clear();
+                    contenidoAdapter.addAll(contenidosAuxiliar);
+                    contenidoAdapter.notifyDataSetChanged();
+                } else {
+                    // Aplicar filtro por título
+                    contenidoAdapter.filterByTitle(newText);
+                }
                 return true;
             }
         });
 
+        menuItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                // No necesitamos realizar ninguna acción cuando el SearchView se expande
+                return true;
+            }
 
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                // Limpiar el texto del SearchView cuando se colapsa
+                if (contenidoAdapter.getCount() == 0) {
+                    searchView.setQuery("", false);
+                    contenidoAdapter.clear();
+                    contenidoAdapter.addAll(contenidosAuxiliar);
+                    contenidoAdapter.notifyDataSetChanged();
+                }
+                return true;
+            }
+        });
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -241,8 +267,6 @@ public class Listado_Multimedia extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-
-        //TODO ARREGLAR
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         final ContenidoDto contenido = (ContenidoDto) contenidoAdapter.getItem(info.position);
 

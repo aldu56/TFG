@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class More extends AppCompatActivity implements MediaController.MediaPlayerControl{
 
 
@@ -21,7 +23,7 @@ public class More extends AppCompatActivity implements MediaController.MediaPlay
 
     VideoView v;
 
-    Button btnVolver;
+    FloatingActionButton btnVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

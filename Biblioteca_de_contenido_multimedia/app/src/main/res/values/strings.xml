@@ -13,7 +13,7 @@
     <string name="InicioDeSesion">Inicio de sesión</string>
     <string name="mas">Más...</string>
     <string name="about">Sobre mi...</string>
-
+    <string name="madeby">App desarrollada por Alberto Andújar</string>
 
     <string-array name="opcionesFormato">
         <item>DVD</item>
