@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,8 +35,9 @@ public class Datos_Multimedia extends AppCompatActivity {
     TextView txtComent;
     Button buttonVisitar;
     Button buttonAceptar;
-    Button buttonVolverALaPrincipal;
+    FloatingActionButton buttonVolverALaPrincipal;
     Button buttonGuardar;
+    RatingBar ratingBar;
 
     ApiManager apiManager;
     ContenidoDto contenidoDto;
@@ -59,8 +63,9 @@ public class Datos_Multimedia extends AppCompatActivity {
         txtComent = (TextView) findViewById(R.id.txtComent);
         buttonVisitar = (Button) findViewById(R.id.buttonVisitar);
         buttonAceptar = (Button) findViewById(R.id.buttonAceptar);
-        buttonVolverALaPrincipal = (Button) findViewById(R.id.buttonVolverALaPrincipal);
+        buttonVolverALaPrincipal = (FloatingActionButton) findViewById(R.id.buttonVolverALaPrincipal);
         buttonGuardar = (Button) findViewById(R.id.buttonGuardar);
+        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
         apiManager = new ApiManager();
 
@@ -159,8 +164,16 @@ public class Datos_Multimedia extends AppCompatActivity {
         textViewDirector.setText(contenido.getAutor());
         textViewAno.setText(String.valueOf(contenido.getAnyo()));
         txtGen.setText(contenido.getGenero());
-        textViewDuracion.setText(contenido.getDuracion());
+
+        if(contenido.getCategoria().equalsIgnoreCase("pelicula") || contenido.getCategoria().equalsIgnoreCase("serie")){
+            textViewDuracion.setText(contenido.getDuracion() + " minutos.");
+        } else {
+            textViewDuracion.setText(contenido.getDuracion() + " páginas.");
+
+        }
+
         textViewDescripcion.setText(contenido.getDescripcion());
+
     }
 
 
