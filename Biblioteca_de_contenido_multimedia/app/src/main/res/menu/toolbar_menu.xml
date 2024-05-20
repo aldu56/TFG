@@ -7,14 +7,14 @@
         android:title="Search"
         android:id="@+id/search"
         android:icon="@drawable/baseline_search_24"
-        app:showAsAction="ifRoom|collapseActionView"
+        app:showAsAction="always"
         app:actionViewClass="android.widget.SearchView"/>
 
     <item
         android:id="@+id/filtro"
         android:icon="@drawable/baseline_filter_alt_24"
         android:title="Filtro"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         >
         <menu
             android:layout_width="match_parent"
@@ -34,6 +34,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:title="@string/LIBRO" />
+            <item
+                android:id="@+id/todos"
+                android:title="Todos"
+                app:showAsAction="never"/>
+
         </menu>
     </item>
 
@@ -42,7 +47,7 @@
         android:title="More..."
         android:id="@+id/txtMore"
         android:icon="@drawable/baseline_more_vert_24"
-        app:showAsAction="ifRoom">
+        app:showAsAction="always">
         <menu
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -56,6 +61,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:title="@string/about" />
+            <item
+                android:id="@+id/borrar_todos"
+                android:title="Borrar todos los contenidos"
+                app:showAsAction="never"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:title="Perfil"
+        android:id="@+id/pefril"
+        android:icon="@drawable/baseline_person_24"
+        app:showAsAction="always">
+        <menu
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <item
+                android:id="@+id/txtPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/perfil" />
         </menu>
     </item>
+
+
 </menu>

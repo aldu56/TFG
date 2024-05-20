@@ -3,6 +3,7 @@ package es.pmdm.bibliotecadecontenidomultimedia;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,6 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +29,7 @@ public class Explorar extends AppCompatActivity {
 
 
     ListView listView;
+    FloatingActionButton btnVolverExpl;
     private ArrayList<ContenidoDto> listaGenerica;
     private ArrayList<ContenidoDto> listaContenidos = new ArrayList<ContenidoDto>();
     private ArrayList<ContenidoDto> listaContenidosAuxiliar = new ArrayList<ContenidoDto>();
@@ -48,6 +52,7 @@ public class Explorar extends AppCompatActivity {
 
 
         listView = (ListView) findViewById(R.id.listViewEx);
+        btnVolverExpl = findViewById(R.id.btnVolverExp);
 
         obtenerListaGenerica();
         obtenerListaUsuario(idUsuario);
@@ -65,7 +70,12 @@ public class Explorar extends AppCompatActivity {
         //TODO Cuando clico en una pelicula de la lista, compruebo que no la tenga ya el user y la añado.
         // (Llamada api para ver lista user, y Llamada api para updatear user) Tambien Llamada api sacar todos los contenidos.
 
-
+btnVolverExpl.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        finish();
+    }
+});
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -85,6 +95,9 @@ public class Explorar extends AppCompatActivity {
                 } else {
                     montarUserUpdateado(contenidoSeleccionado);
                     updateUsuario(idUsuario, user);
+                    Intent resultIntent = new Intent();
+                    setResult(RESULT_OK, resultIntent);
+                    finish();
                 }
             }
         });
@@ -163,22 +176,36 @@ public class Explorar extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.filtroPeli:
+                Toast.makeText(this, "Filtrando por Peliculas.", Toast.LENGTH_SHORT).show();
                 ordenarPorCategoria(listaContenidos, 1);
-                break;
+                return true;
             case R.id.filtroSerie:
+                Toast.makeText(this, "Filtrando por Series.", Toast.LENGTH_SHORT).show();
                 ordenarPorCategoria(listaContenidos, 2);
-                break;
+                return true;
             case R.id.filtroLibro:
+                Toast.makeText(this, "Filtrando por Libros.", Toast.LENGTH_SHORT).show();
                 ordenarPorCategoria(listaContenidos, 3);
-                break;
+                return true;
+            case R.id.todos:
+                Toast.makeText(this, "Mostrando todos los contenidos.", Toast.LENGTH_SHORT).show();
+                ordenarPorCategoria(listaContenidos, 0);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     public void ordenarPorCategoria(ArrayList<ContenidoDto> contenidoUsuario, int id) {
-
         listaContenidos.clear();
         listaContenidos.addAll(listaContenidosAuxiliar);
+
+        if (id == 0) { // Mostrar todos los contenidos
+            contenidoAdapter.clear();
+            contenidoAdapter.addAll(listaContenidosAuxiliar);
+            contenidoAdapter.notifyDataSetChanged();
+            return;
+        }
 
         ArrayList<ContenidoDto> listaFiltrada = new ArrayList<>();
 

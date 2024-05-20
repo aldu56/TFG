@@ -12,6 +12,16 @@
 <string name="mas">More...</string>
     <string name="about">About me...</string>
     <string name="madeby">Made by Alberto Andújar</string>
+    <string name="modificarContraseña">Change password</string>
+    <string name="username">   Username...</string>
+    <string name="password">   Password...</string>
+    <string name="newPassword">   Confirm password...</string>
+    <string name="login">Log In</string>
+    <string name="signin">Sign In</string>
+    <string name="perfil">My user</string>
+
+
+
 
 
 </resources>

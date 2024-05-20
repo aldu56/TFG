@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondillo"
+    tools:context=".change_pass">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnVolverExp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="@color/miamarillo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
+        app:rippleColor="@color/miamarillo"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <Button
+        android:id="@+id/btnCambiar"
+        android:layout_width="249dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#CCB38D"
+        android:text="Cambiar Contraseña"
+        android:textColor="#5D0C1D"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.772" />
+
+    <EditText
+        android:id="@+id/edPasswordConfirm"
+        android:layout_width="258dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_edt"
+        android:ems="10"
+        android:hint="@string/newPassword"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColor="@color/miamarillo"
+        android:textColorHint="#B5B69F7D"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <EditText
+        android:id="@+id/edPasswordChange"
+        android:layout_width="258dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_edt"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColor="@color/miamarillo"
+        android:textColorHint="#B5B69F7D"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

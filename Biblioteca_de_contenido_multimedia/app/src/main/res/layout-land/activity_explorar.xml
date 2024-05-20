@@ -6,10 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".Explorar">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnVolverExp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="@color/miamarillo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954"
+        app:rippleColor="@color/miamarillo"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
     <ListView
         android:id="@+id/listViewEx"
-        android:layout_width="731dp"
-        android:layout_height="414dp"
+        android:layout_width="733dp"
+        android:layout_height="419dp"
         android:background="@color/mirojo"
         android:backgroundTint="@color/mirojo"
         app:layout_constraintBottom_toBottomOf="parent"

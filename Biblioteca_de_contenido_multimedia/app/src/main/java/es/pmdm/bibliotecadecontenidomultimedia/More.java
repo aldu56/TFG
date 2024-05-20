@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -30,7 +29,10 @@ public class More extends AppCompatActivity implements MediaController.MediaPlay
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
 
-        btnVolver = findViewById(R.id.volver);
+        getSupportActionBar().hide();
+
+
+        btnVolver = findViewById(R.id.btnVolverExp);
 
         mc = new MediaController(this);
         mc.setMediaPlayer(this);

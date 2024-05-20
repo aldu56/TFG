@@ -58,5 +58,8 @@ public class About extends AppCompatActivity {
             }
         });
 
+        getSupportActionBar().hide();
+
+
     }
 }

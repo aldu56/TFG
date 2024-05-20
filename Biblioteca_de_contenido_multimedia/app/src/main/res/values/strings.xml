@@ -14,6 +14,14 @@
     <string name="mas">Más...</string>
     <string name="about">Sobre mi...</string>
     <string name="madeby">App desarrollada por Alberto Andújar</string>
+    <string name="modificarContraseña">Cambiar contraseña</string>
+    <string name="username">   Usuario...</string>
+    <string name="password">   Contraseña...</string>
+    <string name="newPassword">   Confirmar contraseña...</string>
+    <string name="login">Acceder</string>
+    <string name="signin">Registrarse</string>
+    <string name="perfil">Mi usuario</string>
+
 
     <string-array name="opcionesFormato">
         <item>DVD</item>

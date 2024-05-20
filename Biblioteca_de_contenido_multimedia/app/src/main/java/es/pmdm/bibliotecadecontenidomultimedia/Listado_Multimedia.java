@@ -30,13 +30,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Listado_Multimedia extends AppCompatActivity {
-
     ListView listView;
     SearchView searchView;
     FloatingActionButton btnNueva;
     ApiManager apiManager;
 
-    ArrayList<ContenidoDto> contenidosAuxiliar = new ArrayList<ContenidoDto>();
+    ArrayList<ContenidoDto> contenidosAuxiliar = new ArrayList<>();
 
     UserDto user;
     int idUsuario;
@@ -44,65 +43,44 @@ public class Listado_Multimedia extends AppCompatActivity {
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
     ContenidoAdapter contenidoAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_multimedia);
 
-       idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
+        idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
+        getSupportActionBar().setTitle("Lista personal");
+
 
         if (idUsuario != -1) {
-//            searchView = findViewById(R.id.search_bar);
-            listView = (ListView) findViewById(R.id.listView);
+            listView = findViewById(R.id.listView);
             btnNueva = findViewById(R.id.btnNueva);
             apiManager = new ApiManager();
-
 
             obtenerListaUsuario(idUsuario);
 
 
             contenidoAdapter = new ContenidoAdapter(this, R.layout.item_view, contenidoUsuarios);
 
-
-
             listView.setAdapter(contenidoAdapter);
-            contenidoAdapter.notifyDataSetChanged();
-
             registerForContextMenu(listView);
 
-
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                    ContenidoDto contenidoSeleccionado = contenidoAdapter.getItem(position);
-
-                    if (contenidoSeleccionado != null) {
-                        // Obtener el título del contenido seleccionado
-                        String titulo = contenidoSeleccionado.getTitulo();
-
-                        // Crear el intent y pasar el título como extra
-                        Intent intent = new Intent(Listado_Multimedia.this, Datos_Multimedia.class);
-                        intent.putExtra("TITULO", titulo);
-                        intent.putExtra("ID_USER", idUsuario);
-                        startActivity(intent);
-                    }
-                }
-            });
-
-
-            btnNueva.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(Listado_Multimedia.this, Explorar.class);
-                    intent.putExtra("ID_USUARIO", idUsuario);
-                    Toast.makeText(Listado_Multimedia.this, "Explorar", Toast.LENGTH_SHORT).show();
+            listView.setOnItemClickListener((parent, view, position, id) -> {
+                ContenidoDto contenidoSeleccionado = contenidoAdapter.getItem(position);
+                if (contenidoSeleccionado != null) {
+                    String titulo = contenidoSeleccionado.getTitulo();
+                    Intent intent = new Intent(Listado_Multimedia.this, Datos_Multimedia.class);
+                    intent.putExtra("TITULO", titulo);
+                    intent.putExtra("ID_USER", idUsuario);
                     startActivity(intent);
                 }
             });
 
-
+            btnNueva.setOnClickListener(v -> {
+                Intent intent = new Intent(Listado_Multimedia.this, Explorar.class);
+                intent.putExtra("ID_USUARIO", idUsuario);
+                startActivityForResult(intent, -15);
+            });
         } else {
             Toast.makeText(this, "El id del usuario no se recibió correctamente.", Toast.LENGTH_SHORT).show();
             finish();
@@ -110,16 +88,25 @@ public class Listado_Multimedia extends AppCompatActivity {
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == -15 && resultCode == RESULT_OK) {
+            obtenerListaUsuario(idUsuario);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        obtenerListaUsuario(idUsuario);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         MenuItem menuItem = menu.findItem(R.id.search);
-
         SearchView searchView = (SearchView) menuItem.getActionView();
-
-        // Obtiene el String de strings desde los recursos
         String sugerenciasBusqueda = getResources().getString(R.string.buscadorHint);
-
-        // Asigna la sugerencia de búsqueda al SearchView
         searchView.setQueryHint(sugerenciasBusqueda);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -131,12 +118,10 @@ public class Listado_Multimedia extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 if (newText.isEmpty()) {
-                    // Si el texto de búsqueda está vacío, restaurar la lista completa
                     contenidoAdapter.clear();
                     contenidoAdapter.addAll(contenidosAuxiliar);
                     contenidoAdapter.notifyDataSetChanged();
                 } else {
-                    // Aplicar filtro por título
                     contenidoAdapter.filterByTitle(newText);
                 }
                 return true;
@@ -146,13 +131,11 @@ public class Listado_Multimedia extends AppCompatActivity {
         menuItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
-                // No necesitamos realizar ninguna acción cuando el SearchView se expande
                 return true;
             }
 
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
-                // Limpiar el texto del SearchView cuando se colapsa
                 if (contenidoAdapter.getCount() == 0) {
                     searchView.setQuery("", false);
                     contenidoAdapter.clear();
@@ -167,37 +150,56 @@ public class Listado_Multimedia extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.mas) {
-            Intent intnet = new Intent(Listado_Multimedia.this, More.class);
-            startActivity(intnet);
-        }else if (item.getItemId() == R.id.about){
-            Intent intnet = new Intent(Listado_Multimedia.this, About.class);
-            startActivity(intnet);
-        }else {
-            switch (item.getItemId()) {
-                case R.id.filtroPeli:
-                    ordenarPorCategoria(contenidoUsuarios, 1);
-                    break;
-                case R.id.filtroSerie:
-                    ordenarPorCategoria(contenidoUsuarios, 2);
-                    break;
-                case R.id.filtroLibro:
-                    ordenarPorCategoria(contenidoUsuarios, 3);
-                    break;
-            }
+        switch (item.getItemId()) {
+            case R.id.mas:
+                startActivity(new Intent(Listado_Multimedia.this, More.class));
+                return true;
+            case R.id.about:
+                startActivity(new Intent(Listado_Multimedia.this, About.class));
+                return true;
+            case R.id.filtroPeli:
+                Toast.makeText(this, "Filtrando por Peliculas.", Toast.LENGTH_SHORT).show();
+                ordenarPorCategoria(1);
+                return true;
+            case R.id.filtroSerie:
+                Toast.makeText(this, "Filtrando por Series.", Toast.LENGTH_SHORT).show();
+                ordenarPorCategoria(2);
+                return true;
+            case R.id.filtroLibro:
+                Toast.makeText(this, "Filtrando por Libros.", Toast.LENGTH_SHORT).show();
+                ordenarPorCategoria(3);
+                return true;
+            case R.id.todos:
+                Toast.makeText(this, "Mostrando todos los contenidos.", Toast.LENGTH_SHORT).show();
+                ordenarPorCategoria(0);
+                return true;
+            case R.id.borrar_todos:
+                borrarTodosLosContenidos();
+                return true;
+            case R.id.txtPerfil:
+                Intent intent = new Intent(Listado_Multimedia.this, user_info.class);
+                intent.putExtra("ID_USUARIO", idUsuario);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
-    public void ordenarPorCategoria(ArrayList<ContenidoDto> contenidoUsuario, int id) {
-
+    public void ordenarPorCategoria(int id) {
         contenidoUsuarios.clear();
         contenidoUsuarios.addAll(contenidosAuxiliar);
 
+        if (id == 0) { // Mostrar todos los contenidos
+            contenidoAdapter.clear();
+            contenidoAdapter.addAll(contenidosAuxiliar);
+            contenidoAdapter.notifyDataSetChanged();
+            return;
+        }
+
         ArrayList<ContenidoDto> listaFiltrada = new ArrayList<>();
 
-        // Filtrar contenidoUsuario según la categoría seleccionada
-        for (ContenidoDto co : contenidoUsuario) {
+        for (ContenidoDto co : contenidoUsuarios) {
             switch (id) {
                 case 1:
                     if (co.getCategoria().equalsIgnoreCase("Pelicula")) {
@@ -214,25 +216,19 @@ public class Listado_Multimedia extends AppCompatActivity {
                         listaFiltrada.add(co);
                     }
                     break;
-                default:
-                    break;
             }
         }
 
-        // Si la lista filtrada no está vacía, actualiza el adaptador
         if (!listaFiltrada.isEmpty()) {
             contenidoAdapter.clear();
             contenidoAdapter.addAll(listaFiltrada);
             contenidoAdapter.notifyDataSetChanged();
         } else {
-            // Si la lista filtrada está vacía, muestra un mensaje o realiza alguna acción
             Toast.makeText(this, "No se encontraron contenidos para esta categoría.", Toast.LENGTH_SHORT).show();
         }
     }
 
-
     public void obtenerListaUsuario(int userId) {
-
         apiManager.getUserById(userId, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
@@ -245,6 +241,7 @@ public class Listado_Multimedia extends AppCompatActivity {
                 if (user != null) {
                     contenidoUsuarios.clear();
                     contenidoUsuarios.addAll(user.getContenidos());
+                    contenidosAuxiliar.clear();
                     contenidosAuxiliar.addAll(user.getContenidos());
                     contenidoAdapter.notifyDataSetChanged();
                 }
@@ -257,8 +254,6 @@ public class Listado_Multimedia extends AppCompatActivity {
         });
     }
 
-
-
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_contextual, menu);
@@ -268,52 +263,72 @@ public class Listado_Multimedia extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        final ContenidoDto contenido = (ContenidoDto) contenidoAdapter.getItem(info.position);
+        int position = info.position;
 
-        int id = item.getItemId();
+        if (item.getItemId() == R.id.eliminar) {
+            ContenidoDto contenidoEliminar = contenidoAdapter.getItem(position);
 
-        if (id == R.id.eliminar) {
-            montarUserUpdateado(contenido);
-            updateUsuario(idUsuario, user);
+            eliminarContenidoDelUsuario(contenidoEliminar);
+
+            contenidoUsuarios.remove(contenidoEliminar);
+            contenidosAuxiliar.remove(contenidoEliminar);
+            contenidoAdapter.notifyDataSetChanged();
+
+            return true;
+        } else {
+            return super.onContextItemSelected(item);
         }
-        return super.onContextItemSelected(item);
     }
 
-    public void montarUserUpdateado(ContenidoDto contenido) {
-        List<ContenidoDto> contenidosUsuarioCambiar = user.getContenidos();
+    private void eliminarContenidoDelUsuario(ContenidoDto contenido) {
+        ArrayList<ContenidoDto> listaActualizada = new ArrayList<>(contenidoUsuarios);
+        listaActualizada.remove(contenido);
 
-        for (ContenidoDto c :
-                contenidosUsuarioCambiar) {
-            if (c.equals(contenido)) {
-                contenidosUsuarioCambiar.remove(c);
-            }
-        }
-        user.setContenidos(contenidosUsuarioCambiar);
+        user.setContenidos(listaActualizada);
+        updateUsuario(idUsuario, user);
     }
 
     public void updateUsuario(int id, UserDto userDto) {
-
-        System.out.println(id + ": " + userDto.toString());
         apiManager.updateUsers(id, userDto, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
-                    System.out.println("Fallo actualizando el usuario" + response.toString());
-                }else {
+                    Toast.makeText(Listado_Multimedia.this, "Fallo actualizando el usuario", Toast.LENGTH_SHORT).show();
+                } else {
                     Toast.makeText(Listado_Multimedia.this, "Lista actualizada correctamente", Toast.LENGTH_SHORT).show();
                     obtenerListaUsuario(idUsuario);
                     contenidoAdapter.notifyDataSetChanged();
                 }
-
             }
 
             @Override
             public void onFailure(Call<UserDto> call, Throwable t) {
-                System.out.println("FALLO EN updateUsuario (Listado_Multimedia)" + t.getMessage().toString());
+                Toast.makeText(Listado_Multimedia.this, "FALLO EN updateUsuario (Listado_Multimedia): " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
+    public void borrarTodosLosContenidos() {
+        user.setContenidos(new ArrayList<ContenidoDto>());
 
+        apiManager.updateUsers(idUsuario, user, new Callback<UserDto>() {
+            @Override
+            public void onResponse(Call<UserDto> call, Response<UserDto> response) {
+                if (!response.isSuccessful()) {
+                    Toast.makeText(Listado_Multimedia.this, "Error al borrar contenidos: " + response.code(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
+                Toast.makeText(Listado_Multimedia.this, "Todos los contenidos han sido borrados.", Toast.LENGTH_SHORT).show();
+                contenidoUsuarios.clear();
+                contenidoAdapter.clear();
+                contenidoAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<UserDto> call, Throwable t) {
+                Toast.makeText(Listado_Multimedia.this, "Error al borrar contenidos: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
 }
