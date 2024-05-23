@@ -158,19 +158,15 @@ public class Listado_Multimedia extends AppCompatActivity {
                 startActivity(new Intent(Listado_Multimedia.this, About.class));
                 return true;
             case R.id.filtroPeli:
-                Toast.makeText(this, "Filtrando por Peliculas.", Toast.LENGTH_SHORT).show();
                 ordenarPorCategoria(1);
                 return true;
             case R.id.filtroSerie:
-                Toast.makeText(this, "Filtrando por Series.", Toast.LENGTH_SHORT).show();
                 ordenarPorCategoria(2);
                 return true;
             case R.id.filtroLibro:
-                Toast.makeText(this, "Filtrando por Libros.", Toast.LENGTH_SHORT).show();
                 ordenarPorCategoria(3);
                 return true;
             case R.id.todos:
-                Toast.makeText(this, "Mostrando todos los contenidos.", Toast.LENGTH_SHORT).show();
                 ordenarPorCategoria(0);
                 return true;
             case R.id.borrar_todos:

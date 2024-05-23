@@ -2,10 +2,14 @@ package es.pmdm.bibliotecadecontenidomultimedia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +30,7 @@ public class user_info extends AppCompatActivity {
     UserDto user = new UserDto();
     int idUsuario;
     Button btnCambiarContraseña;
+    FloatingActionButton btnVolver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +48,27 @@ public class user_info extends AppCompatActivity {
         txtSeries = (TextView) findViewById(R.id.txtSeries);
         txtLibros = (TextView) findViewById(R.id.txtLibros);
         btnCambiarContraseña = (Button) findViewById(R.id.btnCambiarPass);
+        btnVolver = (FloatingActionButton) findViewById(R.id.buttonVolverAtras);
 
         obtenerListaUsuario(idUsuario);
 
+
+        btnCambiarContraseña.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(user_info.this, change_pass.class);
+                intent.putExtra("ID_USUARIO", idUsuario);
+                startActivity(intent);
+
+            }
+        });
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void obtenerListaUsuario(int userId) {
@@ -67,6 +90,15 @@ public class user_info extends AppCompatActivity {
             @Override
             public void onFailure(Call<UserDto> call, Throwable t) {
                 Toast.makeText(user_info.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnCambiarContraseña.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(user_info.this, change_pass.class);
+                intent.putExtra("ID_USUARIO", idUsuario);
+                startActivity(intent);
             }
         });
     }
