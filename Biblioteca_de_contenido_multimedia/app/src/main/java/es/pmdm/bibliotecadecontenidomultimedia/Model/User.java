@@ -11,15 +11,17 @@ public class User implements Serializable {
     private String password;
 
    private List<Contenido> contenidos;
+   private List<Long> rolIds;
 
     public User() {
     }
 
-    public User(int id, String username, String password, List<Contenido> contenidos) {
+    public User(int id, String username, String password, List<Contenido> contenidos, List<Long> rolIds) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.contenidos = contenidos;
+        this.rolIds = rolIds;
     }
 
     public int getId() {
@@ -52,5 +54,13 @@ public class User implements Serializable {
 
     public void setContenidos(List<Contenido> contenidos) {
         this.contenidos = contenidos;
+    }
+
+    public List<Long> getRolIds() {
+        return rolIds;
+    }
+
+    public void setRolIds(List<Long> rolIds) {
+        this.rolIds = rolIds;
     }
 }

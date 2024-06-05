@@ -10,15 +10,18 @@ public class UserDto implements Serializable {
     private String username;
     private String password;
 
+    private List<Long> rolIds;
+
     private List<ContenidoDto> contenidos;
 
 
     public UserDto() {
     }
 
-    public UserDto(String username, String password, List<ContenidoDto> contenidos) {
+    public UserDto(String username, String password, List<Long> rolIds, List<ContenidoDto> contenidos) {
         this.username = username;
         this.password = password;
+        this.rolIds = rolIds;
         this.contenidos = contenidos;
     }
 
@@ -45,6 +48,15 @@ public class UserDto implements Serializable {
     public void setContenidos(List<ContenidoDto> contenidos) {
         this.contenidos = contenidos;
     }
+
+    public List<Long> getRolIds() {
+        return rolIds;
+    }
+
+    public void setRolIds(List<Long> rolIds) {
+        this.rolIds = rolIds;
+    }
+
 
     @Override
     public String toString() {

@@ -1,9 +1,12 @@
 package es.pmdm.bibliotecadecontenidomultimedia;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,8 +32,8 @@ public class user_info extends AppCompatActivity {
     ApiManager apiManager = new ApiManager();
     UserDto user = new UserDto();
     int idUsuario;
-    Button btnCambiarContraseña;
     FloatingActionButton btnVolver;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +41,9 @@ public class user_info extends AppCompatActivity {
         setContentView(R.layout.activity_user_info);
 
         idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
-        getSupportActionBar().hide();
+        token = getIntent().getStringExtra("TOKEN");
 
+        getSupportActionBar().setTitle("User Info");
 
 
         txtUsername = (TextView) findViewById(R.id.txtUsername);
@@ -47,21 +51,12 @@ public class user_info extends AppCompatActivity {
         txtPelis = (TextView) findViewById(R.id.txtPelis);
         txtSeries = (TextView) findViewById(R.id.txtSeries);
         txtLibros = (TextView) findViewById(R.id.txtLibros);
-        btnCambiarContraseña = (Button) findViewById(R.id.btnCambiarPass);
         btnVolver = (FloatingActionButton) findViewById(R.id.buttonVolverAtras);
 
-        obtenerListaUsuario(idUsuario);
+        obtenerListaUsuario(token, idUsuario);
 
 
-        btnCambiarContraseña.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(user_info.this, change_pass.class);
-                intent.putExtra("ID_USUARIO", idUsuario);
-                startActivity(intent);
 
-            }
-        });
 
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,8 +66,31 @@ public class user_info extends AppCompatActivity {
         });
     }
 
-    public void obtenerListaUsuario(int userId) {
-        apiManager.getUserById(userId, new Callback<UserDto>() {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_preferences, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.preferencesitem){
+            Intent intent = new Intent(user_info.this, Preferences.class);
+            intent.putExtra("ID_USER", idUsuario);
+            startActivityForResult(intent, -10);
+        }else if(item.getItemId() == R.id.cambiarPasswordMenu){
+            Intent intent = new Intent(user_info.this, change_pass.class);
+            intent.putExtra("ID_USUARIO", idUsuario);
+            intent.putExtra("TOKEN", token);
+            startActivity(intent);
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void obtenerListaUsuario(String token, int userId) {
+        apiManager.getUserById(token, userId, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
@@ -93,18 +111,11 @@ public class user_info extends AppCompatActivity {
             }
         });
 
-        btnCambiarContraseña.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(user_info.this, change_pass.class);
-                intent.putExtra("ID_USUARIO", idUsuario);
-                startActivity(intent);
-            }
-        });
+
     }
 
 
-    public void asignarTextos(){
+    public void asignarTextos() {
         List<ContenidoDto> contenidoDtos = new ArrayList<ContenidoDto>();
 
         for (ContenidoDto contenidoDto :
@@ -119,19 +130,19 @@ public class user_info extends AppCompatActivity {
         int numeroLibros = 0;
         for (ContenidoDto contenidoDto :
                 contenidoDtos) {
-            if (contenidoDto.getCategoria().equalsIgnoreCase("Pelicula")){
+            if (contenidoDto.getCategoria().equalsIgnoreCase("Pelicula")) {
                 numeroPelis++;
             }
         }
         for (ContenidoDto contenidoDto :
                 contenidoDtos) {
-            if (contenidoDto.getCategoria().equalsIgnoreCase("Serie")){
+            if (contenidoDto.getCategoria().equalsIgnoreCase("Serie")) {
                 numeroSeries++;
             }
         }
         for (ContenidoDto contenidoDto :
                 contenidoDtos) {
-            if (contenidoDto.getCategoria().equalsIgnoreCase("Libro")){
+            if (contenidoDto.getCategoria().equalsIgnoreCase("Libro")) {
                 numeroLibros++;
             }
         }

@@ -1,0 +1,1042 @@
+2024-06-06 00:00:07.482 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:07.512 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:00:07.513 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:00:07.582 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:07.620 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:07.622 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:00:07.623 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:00:18.555 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:18.557 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:00:18.558 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:00:18.628 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:18.678 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:18.679 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:00:18.680 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:00:18.943 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:18.944 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:00:18.945 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:00:19.015 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:19.074 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:00:19.075 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:00:19.076 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:09:41.856 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-06-06 00:09:42.008 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:09:42.054 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2024-06-06 00:09:42.076 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2024-06-06 00:09:42.668 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 28276 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:09:42.669 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:09:43.021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:09:43.051 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:09:43.253 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:09:43.255 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:09:43.255 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:09:43.286 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:09:43.287 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 616 ms
+2024-06-06 00:09:43.378 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:09:43.410 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:09:43.412 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:09:43.418 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:09:43.420 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Starting...
+2024-06-06 00:09:43.426 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-2 - Added connection org.mariadb.jdbc.Connection@180584aa
+2024-06-06 00:09:43.426 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Start completed.
+2024-06-06 00:09:43.511 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:09:43.533 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:09:43.925 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26f281af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6540877e, org.springframework.security.web.context.SecurityContextHolderFilter@32676ef2, org.springframework.security.web.header.HeaderWriterFilter@5211c098, org.springframework.security.web.authentication.logout.LogoutFilter@37ee83ec, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@561dc3bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e540467, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@129d1835, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2220002, org.springframework.security.web.session.SessionManagementFilter@26f146fe, org.springframework.security.web.access.ExceptionTranslationFilter@5bd4e36a, org.springframework.security.web.access.intercept.AuthorizationFilter@235139e1]
+2024-06-06 00:09:44.107 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:09:44.120 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:09:44.123 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 1.572 seconds (process running for 1605.346)
+2024-06-06 00:09:44.125 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-06 00:09:45.547 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-06-06 00:09:45.553 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:09:45.554 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown initiated...
+2024-06-06 00:09:45.557 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown completed.
+2024-06-06 00:09:45.631 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 28276 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:09:45.631 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:09:45.818 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:09:45.834 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:09:45.931 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:09:45.931 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:09:45.932 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:09:45.946 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:09:45.946 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 313 ms
+2024-06-06 00:09:45.984 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:09:46.015 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:09:46.016 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:09:46.019 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:09:46.019 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-3 - Starting...
+2024-06-06 00:09:46.022 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-3 - Added connection org.mariadb.jdbc.Connection@d62d266
+2024-06-06 00:09:46.022 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-3 - Start completed.
+2024-06-06 00:09:46.085 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:09:46.103 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:09:46.404 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a94dcc7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f7fd420, org.springframework.security.web.context.SecurityContextHolderFilter@7206cb31, org.springframework.security.web.header.HeaderWriterFilter@3299dded, org.springframework.security.web.authentication.logout.LogoutFilter@59b78722, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@2e2a0125, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b0e1dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7704cf87, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@311c5e22, org.springframework.security.web.session.SessionManagementFilter@38da4319, org.springframework.security.web.access.ExceptionTranslationFilter@293a0976, org.springframework.security.web.access.intercept.AuthorizationFilter@73061962]
+2024-06-06 00:09:46.542 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:09:46.554 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:09:46.557 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 0.952 seconds (process running for 1607.779)
+2024-06-06 00:09:46.558 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-06 00:10:51.486 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2024-06-06 00:10:51.490 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:10:51.491 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-3 - Shutdown initiated...
+2024-06-06 00:10:51.493 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-3 - Shutdown completed.
+2024-06-06 00:10:51.565 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 28276 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:10:51.565 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:10:51.759 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:10:51.773 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:10:51.882 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:10:51.883 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:10:51.883 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:10:51.899 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:10:51.899 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 333 ms
+2024-06-06 00:10:51.944 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:10:51.979 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:10:51.983 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:10:51.986 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:10:51.987 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-4 - Starting...
+2024-06-06 00:10:51.991 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-4 - Added connection org.mariadb.jdbc.Connection@46c33a0c
+2024-06-06 00:10:51.991 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-4 - Start completed.
+2024-06-06 00:10:52.059 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:10:52.077 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:10:52.384 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53474091, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4814e28d, org.springframework.security.web.context.SecurityContextHolderFilter@5eb87de7, org.springframework.security.web.header.HeaderWriterFilter@115b969b, org.springframework.security.web.authentication.logout.LogoutFilter@5dc8c014, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@29140fc1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ae2df3c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37c061b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@618b6ae, org.springframework.security.web.session.SessionManagementFilter@633290f3, org.springframework.security.web.access.ExceptionTranslationFilter@848f5b, org.springframework.security.web.access.intercept.AuthorizationFilter@5c6fdf5]
+2024-06-06 00:10:52.523 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:10:52.535 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:10:52.537 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 0.998 seconds (process running for 1673.759)
+2024-06-06 00:10:52.538 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-06 00:10:53.975 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-06-06 00:10:53.982 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:10:53.983 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-4 - Shutdown initiated...
+2024-06-06 00:10:53.984 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-4 - Shutdown completed.
+2024-06-06 00:10:54.049 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 28276 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:10:54.049 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:10:54.234 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:10:54.252 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:10:54.363 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:10:54.363 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:10:54.364 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:10:54.378 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:10:54.378 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 327 ms
+2024-06-06 00:10:54.412 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:10:54.451 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:10:54.453 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:10:54.456 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:10:54.457 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-5 - Starting...
+2024-06-06 00:10:54.460 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-5 - Added connection org.mariadb.jdbc.Connection@35de412
+2024-06-06 00:10:54.460 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-5 - Start completed.
+2024-06-06 00:10:54.514 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:10:54.529 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:10:54.832 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b33f155, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29238888, org.springframework.security.web.context.SecurityContextHolderFilter@7f91ab75, org.springframework.security.web.header.HeaderWriterFilter@4ce3a318, org.springframework.security.web.authentication.logout.LogoutFilter@182540e3, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@51c109b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47cb0d83, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16618d01, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41dd62a4, org.springframework.security.web.session.SessionManagementFilter@38588b10, org.springframework.security.web.access.ExceptionTranslationFilter@7978334f, org.springframework.security.web.access.intercept.AuthorizationFilter@1d8e6d16]
+2024-06-06 00:10:54.988 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:10:55.000 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:10:55.003 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 0.977 seconds (process running for 1676.225)
+2024-06-06 00:10:55.004 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-06 00:11:06.691 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-06-06 00:11:06.697 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:11:06.697 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-5 - Shutdown initiated...
+2024-06-06 00:11:06.699 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-5 - Shutdown completed.
+2024-06-06 00:11:06.773 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 28276 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:11:06.773 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:11:06.973 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:11:06.991 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:11:07.120 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:11:07.120 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:11:07.120 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:11:07.137 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:11:07.137 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 363 ms
+2024-06-06 00:11:07.183 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:11:07.233 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:11:07.235 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:11:07.239 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:11:07.240 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-6 - Starting...
+2024-06-06 00:11:07.243 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-6 - Added connection org.mariadb.jdbc.Connection@450191a8
+2024-06-06 00:11:07.243 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-6 - Start completed.
+2024-06-06 00:11:07.302 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:11:07.318 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:11:07.658 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3376361b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@384ab15a, org.springframework.security.web.context.SecurityContextHolderFilter@2aa6ed23, org.springframework.security.web.header.HeaderWriterFilter@6b2224ec, org.springframework.security.web.authentication.logout.LogoutFilter@3447fe19, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@358e4130, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ed8b259, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2427f82a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2180bda9, org.springframework.security.web.session.SessionManagementFilter@45691ad1, org.springframework.security.web.access.ExceptionTranslationFilter@190db0ee, org.springframework.security.web.access.intercept.AuthorizationFilter@34eb93c2]
+2024-06-06 00:11:07.816 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:11:07.828 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:11:07.832 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 1.087 seconds (process running for 1689.054)
+2024-06-06 00:11:07.833 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-06 00:11:09.259 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-06-06 00:11:09.264 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:11:09.266 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-6 - Shutdown initiated...
+2024-06-06 00:11:09.267 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-6 - Shutdown completed.
+2024-06-06 00:11:09.332 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 28276 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:11:09.332 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:11:09.508 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:11:09.524 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:11:09.649 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:11:09.649 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:11:09.649 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:11:09.665 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:11:09.665 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 332 ms
+2024-06-06 00:11:09.698 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:11:09.734 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:11:09.736 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:11:09.740 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:11:09.741 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-7 - Starting...
+2024-06-06 00:11:09.743 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-7 - Added connection org.mariadb.jdbc.Connection@12846f18
+2024-06-06 00:11:09.743 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-7 - Start completed.
+2024-06-06 00:11:09.799 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:11:09.814 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:11:10.126 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d8de166, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@189d65a2, org.springframework.security.web.context.SecurityContextHolderFilter@cd92b6a, org.springframework.security.web.header.HeaderWriterFilter@4e2f0f7, org.springframework.security.web.authentication.logout.LogoutFilter@4040a2af, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@f1c6748, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1461ba20, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7979513, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c61c6c4, org.springframework.security.web.session.SessionManagementFilter@383754a3, org.springframework.security.web.access.ExceptionTranslationFilter@1632871, org.springframework.security.web.access.intercept.AuthorizationFilter@62ed991e]
+2024-06-06 00:11:10.286 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:11:10.298 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:11:10.302 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 0.99 seconds (process running for 1691.524)
+2024-06-06 00:11:10.303 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2024-06-06 00:11:17.912 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:11:17.913 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-7 - Shutdown initiated...
+2024-06-06 00:11:17.914 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-7 - Shutdown completed.
+2024-06-06 00:11:21.677 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 27624 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:11:21.680 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:11:21.728 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-06 00:11:21.728 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-06 00:11:22.704 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:11:22.753 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:11:23.291 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:11:23.304 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:11:23.305 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:11:23.364 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:11:23.364 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1635 ms
+2024-06-06 00:11:23.478 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:11:23.596 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:11:23.673 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-06 00:11:23.714 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:11:23.944 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:11:23.974 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2024-06-06 00:11:24.045 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5cfea405
+2024-06-06 00:11:24.046 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2024-06-06 00:11:25.001 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:11:25.055 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:11:26.045 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51e8bf6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@87643af, org.springframework.security.web.context.SecurityContextHolderFilter@79d6523, org.springframework.security.web.header.HeaderWriterFilter@23b19dfe, org.springframework.security.web.authentication.logout.LogoutFilter@152a03da, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@76422a0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ae9e697, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@242c564c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@558d05cd, org.springframework.security.web.session.SessionManagementFilter@36b037b4, org.springframework.security.web.access.ExceptionTranslationFilter@79e0eb9a, org.springframework.security.web.access.intercept.AuthorizationFilter@714f8547]
+2024-06-06 00:11:26.362 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:11:26.397 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:11:26.405 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 5.556 seconds (process running for 6.185)
+2024-06-06 00:12:07.092 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06 00:12:07.093 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-06-06 00:12:07.094 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+2024-06-06 00:12:07.573 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`id`,r1_0.`name` from `rol` r1_0 where r1_0.`id` in (?)
+2024-06-06 00:12:07.676 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - insert into `user` (`password`,`username`) values (?,?)
+2024-06-06 00:17:04.775 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:17:04.780 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2024-06-06 00:17:04.783 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2024-06-06 00:17:08.484 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 26924 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:17:08.486 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:17:08.518 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-06 00:17:08.518 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-06 00:17:09.189 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:17:09.239 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:17:09.746 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:17:09.756 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:17:09.757 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:17:09.804 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:17:09.804 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1285 ms
+2024-06-06 00:17:09.910 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:17:10.012 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:17:10.074 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-06 00:17:10.107 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:17:10.310 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:17:10.335 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2024-06-06 00:17:10.401 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7f329b1d
+2024-06-06 00:17:10.403 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2024-06-06 00:17:11.222 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:17:11.273 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:17:12.165 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ce95d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21c6d6c4, org.springframework.security.web.context.SecurityContextHolderFilter@6ccc19c2, org.springframework.security.web.header.HeaderWriterFilter@1ae9e697, org.springframework.security.web.authentication.logout.LogoutFilter@1f34a273, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@363bed2f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2edf726e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4140b3f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43d9190b, org.springframework.security.web.session.SessionManagementFilter@747ccf5, org.springframework.security.web.access.ExceptionTranslationFilter@79d6523, org.springframework.security.web.access.intercept.AuthorizationFilter@537e5af4]
+2024-06-06 00:17:12.480 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:17:12.513 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:17:12.520 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 4.477 seconds (process running for 5.134)
+2024-06-06 00:18:20.002 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:18:20.005 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2024-06-06 00:18:20.009 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2024-06-06 00:22:26.727 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 28116 (C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\API_biblioteca_multimedia_Copia\API_biblioteca_multimedia)
+2024-06-06 00:22:26.729 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-06-06 00:22:26.763 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-06 00:22:26.764 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-06 00:22:27.433 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06 00:22:27.480 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2024-06-06 00:22:27.972 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-06-06 00:22:27.981 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-06-06 00:22:27.982 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-06 00:22:28.022 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-06-06 00:22:28.023 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1259 ms
+2024-06-06 00:22:28.131 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06 00:22:28.220 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06 00:22:28.263 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-06 00:22:28.289 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-06-06 00:22:28.461 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06 00:22:28.482 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2024-06-06 00:22:28.547 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@25fa0b85
+2024-06-06 00:22:28.548 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2024-06-06 00:22:29.292 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06 00:22:29.346 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:22:30.211 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c3ebeff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3039f45d, org.springframework.security.web.context.SecurityContextHolderFilter@4ced2345, org.springframework.security.web.header.HeaderWriterFilter@55d550ca, org.springframework.security.web.authentication.logout.LogoutFilter@335040b3, com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter@e79cde7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39f1fb0f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c000b38, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f366544, org.springframework.security.web.session.SessionManagementFilter@26d7f75a, org.springframework.security.web.access.ExceptionTranslationFilter@7053f478, org.springframework.security.web.access.intercept.AuthorizationFilter@52fdc8c5]
+2024-06-06 00:22:30.513 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-06-06 00:22:30.555 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-06-06 00:22:30.562 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 4.227 seconds (process running for 4.843)
+2024-06-06 00:23:24.961 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06 00:23:24.963 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2024-06-06 00:23:24.964 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+2024-06-06 00:23:25.352 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`id`,r1_0.`name` from `rol` r1_0 where r1_0.`id` in (?)
+2024-06-06 00:23:25.449 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - insert into `user` (`password`,`username`) values (?,?)
+2024-06-06 00:24:21.506 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:21.515 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:21.518 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:21.589 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:21.704 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:21.704 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:21.705 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:21.714 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:24:21.716 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:21.717 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:21.718 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:21.719 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.086 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:25.088 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.089 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.159 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:25.195 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:25.196 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.197 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.203 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:24:25.205 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.206 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.206 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.207 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.766 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:25.768 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.770 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.840 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:25.862 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:25.863 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.864 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.868 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:24:25.868 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.869 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.870 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.870 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.924 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:25.926 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:25.927 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:25.999 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.024 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.026 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.027 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.032 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:24:26.034 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.035 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.035 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.036 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.063 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.065 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.066 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.136 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.157 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.158 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.159 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.163 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:24:26.164 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.164 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.165 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.166 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.220 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.221 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.223 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.296 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.392 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:24:26.393 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.394 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.399 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:24:26.400 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.400 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:24:26.401 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:24:26.402 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:25:16.963 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:25:16.963 [http-nio-8080-exec-6] ERROR c.e.A.security.JwtAuthEntryPoint.commence - Unauthorized error: Full authentication is required to access this resource
+2024-06-06 00:25:16.964 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:25:16.966 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:25:17.037 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:27:15.368 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:27:15.370 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:27:15.370 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:27:15.442 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:27:15.512 [http-nio-8080-exec-2] ERROR c.e.A.security.JwtAuthEntryPoint.commence - Unauthorized error: Full authentication is required to access this resource
+2024-06-06 00:28:06.675 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:06.676 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:06.677 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:06.748 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:06.783 [http-nio-8080-exec-4] ERROR c.e.A.security.JwtAuthEntryPoint.commence - Unauthorized error: Full authentication is required to access this resource
+2024-06-06 00:28:21.168 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:21.170 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:21.171 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:21.242 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:22.727 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:22.728 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:22.730 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:22.802 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:22.972 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:22.973 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:22.976 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:23.043 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:23.198 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:23.199 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:23.201 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:23.206 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:23.207 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:23.209 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:23.284 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:23.292 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:51.333 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:51.334 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:51.335 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:51.404 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:52.389 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:52.391 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:52.392 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:52.462 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:52.981 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:52.983 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:52.983 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:53.052 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:53.086 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:53.087 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:53.088 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:53.158 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:58.080 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:28:58.083 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:28:58.083 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:28:58.153 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:01.479 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:01.480 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:29:01.481 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:29:01.552 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:24.912 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:24.913 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:29:24.914 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:29:24.984 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:32.025 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:32.027 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:29:32.028 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:29:32.097 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:48.857 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:48.859 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:29:48.860 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:29:48.930 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:29:48.987 [http-nio-8080-exec-6] ERROR c.e.A.security.JwtAuthEntryPoint.commence - Unauthorized error: Full authentication is required to access this resource
+2024-06-06 00:30:31.230 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:30:31.231 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:30:31.232 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:30:31.301 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:30:31.647 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:30:31.649 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:30:31.649 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:30:31.655 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:30:31.656 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:30:31.656 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:30:31.657 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:30:31.658 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:30:32.288 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestNotUsableException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-06 00:30:32.288 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestNotUsableException
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-06 00:30:37.142 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestNotUsableException
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-06 00:30:37.142 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestNotUsableException
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-06 00:31:46.890 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestNotUsableException
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-06 00:31:58.358 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:31:58.360 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:31:58.363 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:31:58.431 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:31:58.543 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:31:58.544 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:31:58.545 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:31:58.550 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:31:58.551 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:31:58.551 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:31:58.552 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:31:58.553 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:31:58.715 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestNotUsableException
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-06 00:31:58.725 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestNotUsableException
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:251)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at com.example.API_biblioteca_multimedia.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-06 00:33:03.852 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:33:03.853 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:33:03.854 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:33:03.926 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:33:04.009 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:33:04.010 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:33:04.011 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:33:04.016 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:33:04.018 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:33:04.018 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:33:04.019 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:33:04.019 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:33:04.209 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:33:04.209 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:33:04.210 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:33:04.211 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:33:04.213 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:33:04.213 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:33:04.237 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:33:04.237 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:33:04.238 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:33:04.238 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:07.939 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:07.940 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:07.941 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:07.945 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:07.946 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:07.961 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:07.962 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:07.963 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:07.967 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:07.968 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.619 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:13.620 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.621 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:13.693 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:13.748 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:13.750 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.751 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:13.756 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:34:13.757 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.758 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:13.759 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.759 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:13.920 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:13.921 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.922 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:13.927 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:13.930 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.931 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:13.933 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:13.934 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:13.938 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:13.939 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:15.219 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:15.219 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:15.220 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:15.220 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:15.221 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:15.221 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:15.227 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:15.228 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:15.228 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`id`,c1_0.`anyo`,c1_0.`autor`,c1_0.`categoria`,c1_0.`comentario`,c1_0.`descripcion`,c1_0.`duracion`,c1_0.`genero`,c1_0.`puntuacion`,c1_0.`titulo`,c1_0.`url` from `contenido` c1_0
+2024-06-06 00:34:25.353 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:25.354 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:25.356 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:25.361 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:25.362 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:27.295 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:27.296 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:27.297 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:27.303 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:27.304 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:30.747 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:30.748 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:30.748 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:30.752 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:30.753 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:33.011 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:33.011 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:33.012 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:33.016 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:33.017 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:38.845 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:38.846 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:38.848 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:38.875 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:38.876 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:40.969 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:40.969 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:40.971 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:40.971 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:40.972 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:40.972 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:40.978 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:40.979 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:40.983 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`id`,c1_0.`anyo`,c1_0.`autor`,c1_0.`categoria`,c1_0.`comentario`,c1_0.`descripcion`,c1_0.`duracion`,c1_0.`genero`,c1_0.`puntuacion`,c1_0.`titulo`,c1_0.`url` from `contenido` c1_0
+2024-06-06 00:34:41.997 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:41.998 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:41.999 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:42.003 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:42.004 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:46.331 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:46.332 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:46.339 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:46.343 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:46.344 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:49.238 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:34:49.240 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:49.241 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:34:49.245 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:34:49.246 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:34:53.309 [http-nio-8080-exec-4] ERROR c.e.A.security.JwtAuthEntryPoint.commence - Unauthorized error: Full authentication is required to access this resource
+2024-06-06 00:39:15.573 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:15.575 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:15.576 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:15.647 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:15.703 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:15.704 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:15.704 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:15.710 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0
+2024-06-06 00:39:15.710 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:15.711 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:15.712 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:15.712 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:15.859 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:15.860 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:15.860 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:15.865 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:39:15.866 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:15.867 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:15.868 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:15.868 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:15.874 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:39:15.875 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:18.476 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:18.477 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:18.478 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:18.483 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:39:18.484 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:20.834 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:20.836 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:20.837 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:20.841 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:39:20.842 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:28.116 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username` from `user` u1_0 where u1_0.`username`=?
+2024-06-06 00:39:28.118 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:39:28.118 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `contiene` c1_0 join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where c1_0.`user_id`=?
+2024-06-06 00:39:28.123 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select u1_0.`id`,u1_0.`password`,u1_0.`username`,c1_0.`user_id`,c1_1.`id`,c1_1.`anyo`,c1_1.`autor`,c1_1.`categoria`,c1_1.`comentario`,c1_1.`descripcion`,c1_1.`duracion`,c1_1.`genero`,c1_1.`puntuacion`,c1_1.`titulo`,c1_1.`url` from `user` u1_0 left join `contiene` c1_0 on u1_0.`id`=c1_0.`user_id` left join `contenido` c1_1 on c1_1.`id`=c1_0.`contenido_id` where u1_0.`id`=?
+2024-06-06 00:39:28.124 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL.logStatement - select r1_0.`user_id`,r1_1.`id`,r1_1.`name` from `user_role` r1_0 join `rol` r1_1 on r1_1.`id`=r1_0.`role_id` where r1_0.`user_id`=?
+2024-06-06 00:41:56.192 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06 00:41:56.200 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2024-06-06 00:41:56.205 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

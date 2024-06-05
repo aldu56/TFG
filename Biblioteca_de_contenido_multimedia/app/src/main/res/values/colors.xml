@@ -8,5 +8,21 @@
     <color name="mirojo">#5D0C1D</color>
     <color name="minegro">#232323</color>
     <color name="miamarillo">#CCB38D</color>
+    <color name="blue">#2196F3</color>
+
+
+    <!-- Tema Claro -->
+    <color name="lightBackground">#FFFFFF</color>
+    <color name="lightPrimaryText">#000000</color>
+    <color name="lightSecondaryText">#333333</color>
+    <color name="lightAccent">#2196F3</color>
+    <color name="lightElementBackground">#F5F5F5</color>
+
+    <!-- Tema Oscuro -->
+    <color name="darkBackground">#121212</color>
+    <color name="darkPrimaryText">#FFFFFF</color>
+    <color name="darkSecondaryText">#B3B3B3</color>
+    <color name="darkAccent">#BB86FC</color>
+    <color name="darkElementBackground">#1F1F1F</color>
 
 </resources>

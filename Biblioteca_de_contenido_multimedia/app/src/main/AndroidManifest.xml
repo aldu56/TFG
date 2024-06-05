@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +16,12 @@
         android:theme="@style/Theme.BibliotecaDeContenidoMultimedia"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".PoliticaPrivacidad"
+            android:exported="false" />
+        <activity
+            android:name=".Preferences"
+            android:exported="false" />
         <activity
             android:name=".change_pass"
             android:exported="false" />

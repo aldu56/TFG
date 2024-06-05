@@ -10,10 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Interface.LlamadasApi;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
+import es.pmdm.bibliotecadecontenidomultimedia.dto.RegisterUserDto;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -56,17 +58,23 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, "Rellena todos los campos.", Toast.LENGTH_SHORT).show();
                 } else {
 
-                    getUsersAndCheckUser(username, password);
-
+                    addUser(username, password);
 
                 }
             }
         });
     }
 
-    private void addUser(UserDto userDto) {
+    private void addUser(String username, String password) {
 
-        apiManager.createUser(userDto, new Callback<User>() {
+        List<Long> rolIds = new ArrayList<Long>();
+
+
+            RegisterUserDto registerUserDto = new RegisterUserDto();
+            registerUserDto.setUsername(username);
+            registerUserDto.setPassword(password);
+
+        apiManager.createUser(registerUserDto, new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if (!response.isSuccessful()) {
@@ -83,54 +91,9 @@ public class Register extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-                Toast toast = Toast.makeText(getApplicationContext(), "a " + t.getMessage(), Toast.LENGTH_SHORT);
-                toast.show();
+                Toast.makeText(Register.this, "Usuario ya existente.", Toast.LENGTH_SHORT).show();
                 Log.e("Throw err: ", t.getMessage());
             }
         });
     }
-
-
-    private void getUsersAndCheckUser(String username, String password) {
-        apiManager.getUsers(new Callback<List<User>>() {
-            @Override
-            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-                if (!response.isSuccessful()) {
-                    Toast.makeText(Register.this, "Codigo:  " + response.code(), Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                listaUsuarios = response.body();
-                checkUser(username, password);
-            }
-
-            @Override
-            public void onFailure(Call<List<User>> call, Throwable t) {
-                Toast.makeText(Register.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void checkUser(String username, String password) {
-
-        Boolean existe = false;
-        if (listaUsuarios != null) {
-            for (User us : listaUsuarios) {
-                if (us.getUsername().equals(username)) {
-                    existe = true;
-                } else {
-
-                }
-            }
-
-            if (existe == true) {
-                Toast.makeText(this, "El usuario " + username + " ya existe.", Toast.LENGTH_SHORT).show();
-            } else {
-                UserDto userDto = new UserDto(username, password, null);
-
-                addUser(userDto);
-            }
-        }
-    }
-
-
 }

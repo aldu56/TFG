@@ -3,7 +3,6 @@
 
     <string name="Acerca_de">Acerca de...</string>
 
-    <!-- TODO PONER STRINGS PELICULA, SERIE, LIBRO-->
     <string name="PELICULA">Pelicula</string>
     <string name="SERIE">Serie</string>
     <string name="LIBRO">Libro</string>
@@ -21,6 +20,18 @@
     <string name="login">Acceder</string>
     <string name="signin">Registrarse</string>
     <string name="perfil">Mi usuario</string>
+    <string name="preferences">Mis Preferencias</string>
+    <string name="preferencespolicy">Preferencias de la politica de privacidad</string>
+
+    <string name="rojo">Rojo</string>
+    <string name="amarillo">Amarillo</string>
+    <string name="azul">Azul</string>
+    <string name="verde">Verde</string>
+    <string name="blanco">Blanco</string>
+
+
+
+
 
 
     <string-array name="opcionesFormato">

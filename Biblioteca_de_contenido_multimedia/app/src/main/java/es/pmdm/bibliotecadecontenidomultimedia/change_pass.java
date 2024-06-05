@@ -1,7 +1,15 @@
 package es.pmdm.bibliotecadecontenidomultimedia;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +26,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class change_pass extends AppCompatActivity {
+    private static final String CANAL_ID = "1";
     private EditText edPassword;
     private EditText edPasswordConfirm;
     private Button btnCambiar;
@@ -26,10 +35,15 @@ public class change_pass extends AppCompatActivity {
     private UserDto user;
     private ApiManager apiManager;
 
+    String token;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_pass);
+
+        getSupportActionBar().setTitle("Cambio de contraseña");
+
 
         edPassword = findViewById(R.id.edPasswordChange);
         edPasswordConfirm = findViewById(R.id.edPasswordConfirm);
@@ -38,7 +52,9 @@ public class change_pass extends AppCompatActivity {
 
         apiManager = new ApiManager();
         idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
-        obtenerUsuario(idUsuario);
+        token = getIntent().getStringExtra("TOKEN");
+
+        obtenerUsuario(token, idUsuario);
 
         btnVolverExp3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,8 +71,8 @@ public class change_pass extends AppCompatActivity {
         });
     }
 
-    private void obtenerUsuario(int userId) {
-        apiManager.getUserById(userId, new Callback<UserDto>() {
+    private void obtenerUsuario(String token, int userId) {
+        apiManager.getUserById(token, userId, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
@@ -89,7 +105,7 @@ public class change_pass extends AppCompatActivity {
 
         user.setPassword(nuevaContrasena);
 
-        apiManager.updateUsers(idUsuario, user, new Callback<UserDto>() {
+        apiManager.updateUsers(token, idUsuario, user, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
@@ -97,6 +113,7 @@ public class change_pass extends AppCompatActivity {
                     return;
                 }
                 Toast.makeText(change_pass.this, "Contraseña cambiada con éxito.", Toast.LENGTH_SHORT).show();
+                mostrarNotificacion(false, false);
                 finish();
             }
 
@@ -105,5 +122,38 @@ public class change_pass extends AppCompatActivity {
                 Toast.makeText(change_pass.this, "Error al cambiar la contraseña: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+
+    private void mostrarNotificacion(boolean expandible, boolean actividad) {
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(change_pass.this, CANAL_ID);
+        builder.setSmallIcon(android.R.drawable.ic_dialog_info);
+
+        if (!expandible) {
+            builder.setContentTitle("Biblioteca Multimedia");
+            builder.setContentText("Has cambiado tu contraseña.");
+        } else {
+            NotificationCompat.InboxStyle estilo = new NotificationCompat.InboxStyle();
+            estilo.setBigContentTitle("Biblioteca Multimedia");
+
+            estilo.addLine("Has cambiado tu  contraseña.");
+
+            builder.setStyle(estilo);
+        }
+
+        builder.setPriority(NotificationCompat.PRIORITY_MAX);
+
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel canal = new NotificationChannel(CANAL_ID, "Biblioteca Multimedia", NotificationManager.IMPORTANCE_DEFAULT);
+            notificationManager.createNotificationChannel(canal);
+        }
+
+        Notification notificacion = builder.build();
+        notificationManager.notify(Integer.parseInt(CANAL_ID), notificacion);
+
     }
 }

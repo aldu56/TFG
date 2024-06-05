@@ -19,6 +19,15 @@
     <string name="login">Log In</string>
     <string name="signin">Sign In</string>
     <string name="perfil">My user</string>
+    <string name="preferences">My Preferences</string>
+    <string name="preferencespolicy">Privacy Policy Preferences</string>
+    <string name="rojo">Red</string>
+    <string name="amarillo">Yellow</string>
+    <string name="azul">Blue</string>
+    <string name="verde">Green</string>
+    <string name="blanco">White</string>
+
+
 
 
 

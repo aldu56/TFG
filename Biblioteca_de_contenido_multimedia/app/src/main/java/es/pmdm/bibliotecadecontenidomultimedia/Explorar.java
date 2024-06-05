@@ -41,11 +41,14 @@ public class Explorar extends AppCompatActivity {
     UserDto user;
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
 
+    String token;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explorar);
         idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
+        token = getIntent().getStringExtra("TOKEN");
 
         getSupportActionBar().setTitle("Explorar contenido");
 
@@ -55,7 +58,7 @@ public class Explorar extends AppCompatActivity {
         btnVolverExpl = findViewById(R.id.btnVolverExp);
 
         obtenerListaGenerica();
-        obtenerListaUsuario(idUsuario);
+        obtenerListaUsuario(token, idUsuario);
 
         apiManager = new ApiManager();
         contenidoAdapter = new ContenidoAdapter(this, R.layout.item_view, listaContenidos);
@@ -67,8 +70,6 @@ public class Explorar extends AppCompatActivity {
         registerForContextMenu(listView);
 
 
-        //TODO Cuando clico en una pelicula de la lista, compruebo que no la tenga ya el user y la añado.
-        // (Llamada api para ver lista user, y Llamada api para updatear user) Tambien Llamada api sacar todos los contenidos.
 
 btnVolverExpl.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -94,7 +95,7 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
                     Toast.makeText(Explorar.this, "El contenido ya está en tu lista", Toast.LENGTH_SHORT).show();
                 } else {
                     montarUserUpdateado(contenidoSeleccionado);
-                    updateUsuario(idUsuario, user);
+                    updateUsuario(token, idUsuario, user);
                     Intent resultIntent = new Intent();
                     setResult(RESULT_OK, resultIntent);
                     finish();
@@ -243,7 +244,7 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
     }
 
     public void obtenerListaGenerica() {
-        apiManager.getContenidos(new Callback<ArrayList<ContenidoDto>>() {
+        apiManager.getContenidos(token,new Callback<ArrayList<ContenidoDto>>() {
             @Override
             public void onResponse(Call<ArrayList<ContenidoDto>> call, Response<ArrayList<ContenidoDto>> response) {
                 if (!response.isSuccessful()) {
@@ -268,9 +269,9 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
         });
     }
 
-    public void obtenerListaUsuario(int userId) {
+    public void obtenerListaUsuario(String token, int userId) {
 
-        apiManager.getUserById(userId, new Callback<UserDto>() {
+        apiManager.getUserById(token, userId, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
@@ -303,17 +304,16 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
 
     }
 
-    public void updateUsuario(int id, UserDto userDto) {
-//TODO REVISAR
+    public void updateUsuario(String token, int id, UserDto userDto) {
         System.out.println("ACTUALIZAR USER EXPLORAR: " + id + ": " + userDto.toString());
-        apiManager.updateUsers(id, userDto, new Callback<UserDto>() {
+        apiManager.updateUsers(token, id, userDto, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
                     System.out.println("Fallo actualizando el usuario (Explorar)" + response.toString());
                 } else {
                     Toast.makeText(Explorar.this, "El contenido se ha añadido correctamente. ", Toast.LENGTH_SHORT).show();
-                    obtenerListaUsuario(idUsuario);
+                    obtenerListaUsuario(token, idUsuario);
                     contenidoAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
 
                 }

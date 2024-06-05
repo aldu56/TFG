@@ -1,12 +1,27 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.BibliotecaDeContenidoMultimedia" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
         <item name="colorPrimary">@color/mirojo</item>
         <item name="colorPrimaryVariant">@color/miamarillo</item>
     </style>
 
     <style name="Theme.BibliotecaDeContenidoMultimedia" parent="Base.Theme.BibliotecaDeContenidoMultimedia" />
+
+    <!-- Tema Claro -->
+    <style name="Theme.BibliotecaDeContenidoMultimedia.Light" parent="Base.Theme.BibliotecaDeContenidoMultimedia">
+        <item name="android:colorBackground">@color/lightBackground</item>
+        <item name="android:textColorPrimary">@color/lightPrimaryText</item>
+        <item name="android:textColorSecondary">@color/lightSecondaryText</item>
+        <item name="colorAccent">@color/lightAccent</item>
+        <item name="android:colorButtonNormal">@color/lightElementBackground</item>
+    </style>
+
+    <!-- Tema Oscuro -->
+    <style name="Theme.BibliotecaDeContenidoMultimedia.Dark" parent="Base.Theme.BibliotecaDeContenidoMultimedia">
+        <item name="android:colorBackground">@color/darkBackground</item>
+        <item name="android:textColorPrimary">@color/darkPrimaryText</item>
+        <item name="android:textColorSecondary">@color/darkSecondaryText</item>
+        <item name="colorAccent">@color/darkAccent</item>
+        <item name="android:colorButtonNormal">@color/darkElementBackground</item>
+    </style>
 </resources>

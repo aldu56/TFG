@@ -42,6 +42,7 @@ public class Listado_Multimedia extends AppCompatActivity {
 
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
     ContenidoAdapter contenidoAdapter;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,8 @@ public class Listado_Multimedia extends AppCompatActivity {
         setContentView(R.layout.activity_listado_multimedia);
 
         idUsuario = getIntent().getIntExtra("ID_USUARIO", -1);
+        token = getIntent().getStringExtra("TOKEN");
+
         getSupportActionBar().setTitle("Lista personal");
 
 
@@ -57,7 +60,7 @@ public class Listado_Multimedia extends AppCompatActivity {
             btnNueva = findViewById(R.id.btnNueva);
             apiManager = new ApiManager();
 
-            obtenerListaUsuario(idUsuario);
+            obtenerListaUsuario(token, idUsuario);
 
 
             contenidoAdapter = new ContenidoAdapter(this, R.layout.item_view, contenidoUsuarios);
@@ -72,6 +75,7 @@ public class Listado_Multimedia extends AppCompatActivity {
                     Intent intent = new Intent(Listado_Multimedia.this, Datos_Multimedia.class);
                     intent.putExtra("TITULO", titulo);
                     intent.putExtra("ID_USER", idUsuario);
+                    intent.putExtra("TOKEN", token);
                     startActivity(intent);
                 }
             });
@@ -79,6 +83,7 @@ public class Listado_Multimedia extends AppCompatActivity {
             btnNueva.setOnClickListener(v -> {
                 Intent intent = new Intent(Listado_Multimedia.this, Explorar.class);
                 intent.putExtra("ID_USUARIO", idUsuario);
+                intent.putExtra("TOKEN", token);
                 startActivityForResult(intent, -15);
             });
         } else {
@@ -91,14 +96,14 @@ public class Listado_Multimedia extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == -15 && resultCode == RESULT_OK) {
-            obtenerListaUsuario(idUsuario);
+            obtenerListaUsuario(token, idUsuario);
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        obtenerListaUsuario(idUsuario);
+        obtenerListaUsuario(token, idUsuario);
     }
 
     @Override
@@ -170,11 +175,12 @@ public class Listado_Multimedia extends AppCompatActivity {
                 ordenarPorCategoria(0);
                 return true;
             case R.id.borrar_todos:
-                borrarTodosLosContenidos();
+                borrarTodosLosContenidos(token);
                 return true;
             case R.id.txtPerfil:
                 Intent intent = new Intent(Listado_Multimedia.this, user_info.class);
                 intent.putExtra("ID_USUARIO", idUsuario);
+                intent.putExtra("TOKEN", token);
                 startActivity(intent);
                 return true;
             default:
@@ -224,8 +230,8 @@ public class Listado_Multimedia extends AppCompatActivity {
         }
     }
 
-    public void obtenerListaUsuario(int userId) {
-        apiManager.getUserById(userId, new Callback<UserDto>() {
+    public void obtenerListaUsuario(String token, int userId) {
+        apiManager.getUserById(token, userId, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
@@ -281,18 +287,18 @@ public class Listado_Multimedia extends AppCompatActivity {
         listaActualizada.remove(contenido);
 
         user.setContenidos(listaActualizada);
-        updateUsuario(idUsuario, user);
+        updateUsuario(token, idUsuario, user);
     }
 
-    public void updateUsuario(int id, UserDto userDto) {
-        apiManager.updateUsers(id, userDto, new Callback<UserDto>() {
+    public void updateUsuario(String token, int id, UserDto userDto) {
+        apiManager.updateUsers(token, id, userDto, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
                     Toast.makeText(Listado_Multimedia.this, "Fallo actualizando el usuario", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(Listado_Multimedia.this, "Lista actualizada correctamente", Toast.LENGTH_SHORT).show();
-                    obtenerListaUsuario(idUsuario);
+                    obtenerListaUsuario(token, idUsuario);
                     contenidoAdapter.notifyDataSetChanged();
                 }
             }
@@ -303,10 +309,10 @@ public class Listado_Multimedia extends AppCompatActivity {
             }
         });
     }
-    public void borrarTodosLosContenidos() {
+    public void borrarTodosLosContenidos(String token) {
         user.setContenidos(new ArrayList<ContenidoDto>());
 
-        apiManager.updateUsers(idUsuario, user, new Callback<UserDto>() {
+        apiManager.updateUsers(token, idUsuario, user, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {

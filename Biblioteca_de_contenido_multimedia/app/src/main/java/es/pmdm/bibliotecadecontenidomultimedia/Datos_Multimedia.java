@@ -46,6 +46,8 @@ public class Datos_Multimedia extends AppCompatActivity {
     String titulo;
     ContenidoDto contenido;
 
+    String token;
+
 
 
     @Override
@@ -78,9 +80,10 @@ public class Datos_Multimedia extends AppCompatActivity {
             } else {
                 titulo = extras.getString("TITULO");
                 idUser = getIntent().getExtras().getInt("ID_USER");
+                token = getIntent().getStringExtra("TOKEN");
                 System.out.println(idUser + " ID DEL USUARIO");
                 System.out.println(titulo + "TITULO DEL CONTENIDO");
-                obtenerListaUsuario(idUser);
+                obtenerListaUsuario(token, idUser);
             }
         }
 
@@ -102,9 +105,9 @@ public class Datos_Multimedia extends AppCompatActivity {
     }
 
 
-    public void obtenerListaUsuario(int userId) {
+    public void obtenerListaUsuario(String token, int userId) {
 
-        apiManager.getUserById(userId, new Callback<UserDto>() {
+        apiManager.getUserById(token, userId, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
@@ -127,27 +130,6 @@ public class Datos_Multimedia extends AppCompatActivity {
                 Toast.makeText(Datos_Multimedia.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
-    public void getContneidoByTitulo(String titulo) {
-        apiManager.getContenidoByTitulo(titulo, new Callback<ContenidoDto>() {
-            @Override
-            public void onResponse(Call<ContenidoDto> call, Response<ContenidoDto> response) {
-                if (!response.isSuccessful()) {
-                    System.out.println("Fallo obteniendo contenido: " + response.toString());
-                } else {
-                    Toast.makeText(Datos_Multimedia.this, "Mostrando Contenido...", Toast.LENGTH_SHORT).show();
-                    contenidoDto = response.body();
-                    System.out.println(contenidoDto.toString());
-                    montarDatosContenido();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ContenidoDto> call, Throwable t) {
-                System.out.println("FALLO en getContenidoByTitulo (Datos_Multimedia): " + t.getMessage().toString());
-            }
-        });
-
     }
 
     public void montarDatosContenido(){
@@ -177,7 +159,6 @@ public class Datos_Multimedia extends AppCompatActivity {
     }
 
 
-    //TODO MODIFICAR LISTA CONTENIDO PERSONAL; PONER COMENTARIO Y VALORACION.
 
 
 }

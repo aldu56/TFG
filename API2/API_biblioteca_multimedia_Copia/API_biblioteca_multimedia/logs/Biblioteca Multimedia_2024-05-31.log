@@ -1,0 +1,32 @@
+2024-05-31 13:19:53.297 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarting - Starting ApiBibliotecaMultimediaApplication using Java 21 with PID 5036 (C:\Users\Alberto\Desktop\TFG\API\API_biblioteca_multimedia\API_biblioteca_multimedia\target\classes started by Alberto in C:\Users\Alberto\Desktop\TFG\API\API_biblioteca_multimedia\API_biblioteca_multimedia)
+2024-05-31 13:19:53.299 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2024-05-31 13:19:53.345 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-31 13:19:53.345 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-31 13:19:54.081 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-31 13:19:54.129 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2024-05-31 13:19:54.595 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 8080 (http)
+2024-05-31 13:19:54.607 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2024-05-31 13:19:54.607 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-31 13:19:54.652 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2024-05-31 13:19:54.653 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1308 ms
+2024-05-31 13:19:54.774 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-31 13:19:54.844 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-31 13:19:54.879 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+2024-05-31 13:19:55.108 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-31 13:19:55.133 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2024-05-31 13:19:55.210 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6e663e63
+2024-05-31 13:19:55.212 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2024-05-31 13:19:55.990 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-31 13:19:56.042 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31 13:19:56.433 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-31 13:19:56.977 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2024-05-31 13:19:57.011 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 8080 (http) with context path ''
+2024-05-31 13:19:57.018 [restartedMain] INFO  c.e.A.ApiBibliotecaMultimediaApplication.logStarted - Started ApiBibliotecaMultimediaApplication in 4.134 seconds (process running for 4.983)
+2024-05-31 14:18:00.041 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m51s153ms715µs800ns).
+2024-05-31 14:27:37.674 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s496ms598µs500ns).
+2024-05-31 14:31:23.963 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s251ms487µs900ns).
+2024-05-31 14:40:57.684 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m3s578ms336µs400ns).
+2024-05-31 15:05:23.642 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m25s845ms368µs600ns).
+2024-05-31 15:06:32.820 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-31 15:06:32.830 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2024-05-31 15:06:32.833 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
