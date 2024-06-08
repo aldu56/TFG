@@ -79,12 +79,6 @@ public class user_info extends AppCompatActivity {
             Intent intent = new Intent(user_info.this, Preferences.class);
             intent.putExtra("ID_USER", idUsuario);
             startActivityForResult(intent, -10);
-        }else if(item.getItemId() == R.id.cambiarPasswordMenu){
-            Intent intent = new Intent(user_info.this, change_pass.class);
-            intent.putExtra("ID_USUARIO", idUsuario);
-            intent.putExtra("TOKEN", token);
-            startActivity(intent);
-
         }
         return super.onOptionsItemSelected(item);
     }

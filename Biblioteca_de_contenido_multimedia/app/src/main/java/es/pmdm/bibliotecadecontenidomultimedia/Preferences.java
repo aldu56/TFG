@@ -26,6 +26,9 @@ public class Preferences extends AppCompatActivity {
     RadioButton rbVerdeF;
     RadioButton rbBlancoF;
 
+    RadioButton rbNegro;
+    RadioButton rbNegroF;
+
     private EditText etSize;
 
     private Button btnGuardar;
@@ -52,6 +55,8 @@ public class Preferences extends AppCompatActivity {
         rbVerdeF = findViewById(R.id.rbAmarilloF);
         rbRojoF = findViewById(R.id.rbRojoF);
         rbBlancoF = findViewById(R.id.rbBlancoF);
+        rbNegro = findViewById(R.id.rbNegro);
+        rbNegroF = findViewById(R.id.rbNegroF);
 
 
 
@@ -114,32 +119,26 @@ public class Preferences extends AppCompatActivity {
         } else if (colorSeleccionado == rbVerde.getId()) {
             editorPreferencias.putInt("color", Color.YELLOW);
         } else if (colorSeleccionado == rbBlanco.getId()) {
-        editorPreferencias.putInt("color", Color.WHITE);
+            editorPreferencias.putInt("color", Color.WHITE);
+        } else if (colorSeleccionado == rbNegro.getId()) {
+            editorPreferencias.putInt("color", Color.BLACK);
+        }
 
-
-
-        //TODO ARREGLAR
-        int fondo = rGroupF.getCheckedRadioButtonId();
-        if (fondo == rbRojoF.getId()) {
+        int fondoSeleccionado = rGroupF.getCheckedRadioButtonId();
+        if (fondoSeleccionado == rbRojoF.getId()) {
             editorPreferencias.putInt("fondo", Color.RED);
-        }
-        else if (fondo == rbAzulF.getId()) {
+        } else if (fondoSeleccionado == rbAzulF.getId()) {
             editorPreferencias.putInt("fondo", Color.BLUE);
-        }
-        else if (fondo == rbVerdeF.getId()) {
+        } else if (fondoSeleccionado == rbVerdeF.getId()) {
             editorPreferencias.putInt("fondo", Color.YELLOW);
-        }
-        else if (fondo == rbBlancoF.getId()) {
+        } else if (fondoSeleccionado == rbBlancoF.getId()) {
             editorPreferencias.putInt("fondo", Color.WHITE);
+        }else if (fondoSeleccionado == rbNegroF.getId()) {
+            editorPreferencias.putInt("fondo", Color.BLACK);
         }
-
-
-
-
-
-    }
 
         editorPreferencias.apply();
+
         Intent intent = new Intent(Preferences.this, PoliticaPrivacidad.class);
         startActivity(intent);
     }

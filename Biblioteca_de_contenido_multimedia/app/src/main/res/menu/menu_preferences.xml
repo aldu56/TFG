@@ -7,7 +7,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="@string/preferences" />
-    <item
-        android:id="@+id/cambiarPasswordMenu"
-        android:title="@string/modificarContraseña" />
 </menu>

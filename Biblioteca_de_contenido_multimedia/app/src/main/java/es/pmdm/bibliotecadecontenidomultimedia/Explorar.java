@@ -20,6 +20,7 @@ import java.util.List;
 
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
+import es.pmdm.bibliotecadecontenidomultimedia.dto.UpdateUserDTO;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,6 +43,8 @@ public class Explorar extends AppCompatActivity {
     ArrayList<ContenidoDto> contenidoUsuarios = new ArrayList<>();
 
     String token;
+
+    UpdateUserDTO updateUserDTO = new UpdateUserDTO();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +90,7 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
                 for (ContenidoDto contenido : contenidoUsuarios) {
                     if (contenido.getTitulo().equalsIgnoreCase(contenidoSeleccionado.getTitulo())) {
                         contenidoYaEnLista = true;
-                        break; // Salir del bucle tan pronto como encuentres un contenido igual
+                        break;
                     }
                 }
 
@@ -95,10 +98,8 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
                     Toast.makeText(Explorar.this, "El contenido ya está en tu lista", Toast.LENGTH_SHORT).show();
                 } else {
                     montarUserUpdateado(contenidoSeleccionado);
-                    updateUsuario(token, idUsuario, user);
-                    Intent resultIntent = new Intent();
-                    setResult(RESULT_OK, resultIntent);
-                    finish();
+                    updateUsuario(token, idUsuario, updateUserDTO);
+
                 }
             }
         });
@@ -257,8 +258,6 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
                     listaContenidos.addAll(listaGenerica);
                     listaContenidosAuxiliar.addAll(listaGenerica);
                     contenidoAdapter.notifyDataSetChanged();
-
-
                 }
             }
 
@@ -299,14 +298,14 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
         listaActualizada.addAll(contenidoUsuarios);
         listaActualizada.add(contenido);
 
-        user.setContenidos(listaActualizada);
-
+        updateUserDTO.setId(idUsuario);
+        updateUserDTO.setContenidos(listaActualizada);
 
     }
 
-    public void updateUsuario(String token, int id, UserDto userDto) {
-        System.out.println("ACTUALIZAR USER EXPLORAR: " + id + ": " + userDto.toString());
-        apiManager.updateUsers(token, id, userDto, new Callback<UserDto>() {
+    public void updateUsuario(String token, int id, UpdateUserDTO updateUserDTO) {
+        System.out.println("ACTUALIZAR USER EXPLORAR: " + id + ": " + updateUserDTO.toString());
+        apiManager.updateUser(token, id, updateUserDTO, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {
@@ -316,6 +315,9 @@ btnVolverExpl.setOnClickListener(new View.OnClickListener() {
                     obtenerListaUsuario(token, idUsuario);
                     contenidoAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
 
+                    Intent resultIntent = new Intent();
+                    setResult(RESULT_OK, resultIntent);
+                    finish();
                 }
 
             }

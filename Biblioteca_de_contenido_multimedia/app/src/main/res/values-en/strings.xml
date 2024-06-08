@@ -26,6 +26,10 @@
     <string name="azul">Blue</string>
     <string name="verde">Green</string>
     <string name="blanco">White</string>
+    <string name="negro">Black</string>
+
+    <string name="tamanoletra">Font Size...</string>
+
 
 
 

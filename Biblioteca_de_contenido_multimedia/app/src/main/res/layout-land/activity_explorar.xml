@@ -14,17 +14,17 @@
         app:backgroundTint="@color/miamarillo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954"
+        app:layout_constraintVertical_bias="0.952"
         app:rippleColor="@color/miamarillo"
         app:srcCompat="@drawable/baseline_arrow_back_24" />
 
     <ListView
         android:id="@+id/listViewEx"
-        android:layout_width="733dp"
-        android:layout_height="419dp"
+        android:layout_width="749dp"
+        android:layout_height="399dp"
         android:background="@color/mirojo"
         android:backgroundTint="@color/mirojo"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -24,6 +24,7 @@ import java.util.List;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.Contenido;
 import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
+import es.pmdm.bibliotecadecontenidomultimedia.dto.UpdateUserDTO;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -311,8 +312,12 @@ public class Listado_Multimedia extends AppCompatActivity {
     }
     public void borrarTodosLosContenidos(String token) {
         user.setContenidos(new ArrayList<ContenidoDto>());
+        UpdateUserDTO userUpdate = new UpdateUserDTO();
 
-        apiManager.updateUsers(token, idUsuario, user, new Callback<UserDto>() {
+        userUpdate.setContenidos(user.getContenidos());
+        userUpdate.setId(idUsuario);
+
+        apiManager.updateUser(token, idUsuario, userUpdate, new Callback<UserDto>() {
             @Override
             public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 if (!response.isSuccessful()) {

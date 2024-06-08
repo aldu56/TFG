@@ -10,6 +10,7 @@ import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.LoginUserDto;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.RegisterUserDto;
+import es.pmdm.bibliotecadecontenidomultimedia.dto.UpdateUserDTO;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -39,6 +40,9 @@ public interface  LlamadasApi {
 
     @PUT("updateUsers/{id}")
     Call<UserDto> updateUsers(@Header("Authorization")String token, @Path("id") int id, @Body UserDto userDto);
+
+    @PUT("updateUser/{id}")
+    Call<UserDto> updateUser(@Header("Authorization")String token, @Path("id") int id, @Body UpdateUserDTO updateUserDTO);
 
     @GET("/contenidoByTitulo/{titulo}")
     Call<ContenidoDto> getContenidoByTitulo(@Header("Authorization")String token, @Path("titulo") String titulo);

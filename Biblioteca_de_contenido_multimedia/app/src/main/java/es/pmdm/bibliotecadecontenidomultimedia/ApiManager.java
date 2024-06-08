@@ -13,6 +13,7 @@ import es.pmdm.bibliotecadecontenidomultimedia.Model.User;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.ContenidoDto;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.LoginUserDto;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.RegisterUserDto;
+import es.pmdm.bibliotecadecontenidomultimedia.dto.UpdateUserDTO;
 import es.pmdm.bibliotecadecontenidomultimedia.dto.UserDto;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -77,6 +78,11 @@ public class ApiManager {
 
     public void updateUsers(String token, int id, UserDto userDto, Callback<UserDto> callback){
         Call<UserDto> call = llamadaApi.updateUsers(token, id, userDto);
+        call.enqueue(callback);
+    }
+
+    public void updateUser(String token, int id, UpdateUserDTO updateUserDTO, Callback<UserDto> callback){
+        Call<UserDto> call = llamadaApi.updateUser(token, id, updateUserDTO);
         call.enqueue(callback);
     }
 

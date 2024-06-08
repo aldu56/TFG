@@ -35,10 +35,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <TextView
         android:id="@+id/textView4"
@@ -50,21 +50,21 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <RadioGroup
         android:id="@+id/rGroupF"
-        android:layout_width="104dp"
-        android:layout_height="245dp"
+        android:layout_width="171dp"
+        android:layout_height="254dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257">
+        app:layout_constraintVertical_bias="0.402">
 
         <RadioButton
             android:id="@+id/rbBlancoF"
@@ -109,16 +109,16 @@
 
     <RadioGroup
         android:id="@+id/rGroup"
-        android:layout_width="104dp"
-        android:layout_height="245dp"
+        android:layout_width="171dp"
+        android:layout_height="254dp"
         android:background="@color/mirojo"
         app:circularflow_radiusInDP="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257">
+        app:layout_constraintVertical_bias="0.414">
 
         <RadioButton
             android:id="@+id/rbBlanco"
@@ -163,17 +163,17 @@
 
     <Button
         android:id="@+id/btnGuardar"
-        android:layout_width="274dp"
-        android:layout_height="57dp"
+        android:layout_width="297dp"
+        android:layout_height="43dp"
         android:layout_marginTop="160dp"
         android:backgroundTint="@color/miamarillo"
         android:text="Visualizar Politica de Privacidad"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.969" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

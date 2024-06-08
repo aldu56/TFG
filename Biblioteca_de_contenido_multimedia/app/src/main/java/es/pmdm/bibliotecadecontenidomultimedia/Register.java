@@ -73,18 +73,18 @@ public class Register extends AppCompatActivity {
             RegisterUserDto registerUserDto = new RegisterUserDto();
             registerUserDto.setUsername(username);
             registerUserDto.setPassword(password);
+            registerUserDto.setRolIds(rolIds);
 
         apiManager.createUser(registerUserDto, new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if (!response.isSuccessful()) {
-                    Toast toast = Toast.makeText(getApplicationContext(), response.message(), Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(Register.this, "Error: " + response.code(), Toast.LENGTH_SHORT).show();
                     Log.e("Response err: ", response.message());
                     return;
                 }
                 User user = response.body();
-                Toast toast = Toast.makeText(getApplicationContext(), "Usuario: '" + user.getUsername() + "' creado correctamente", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(), "Usuario: '" + username + "' creado correctamente", Toast.LENGTH_SHORT);
                 toast.show();
                 finish();
             }
